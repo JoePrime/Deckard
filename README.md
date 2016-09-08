@@ -1,2 +1,4 @@
 # Deckard
-Pakanrakennuspohjainen korttipeli 
+Pakanrakennuspohjainen korttipeli
+
+Woah, täällä on jo jotain.
