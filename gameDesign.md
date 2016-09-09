@@ -7,13 +7,13 @@
 - **Magic The Gathering**
 
 ##Deck size##
-30 **Hearthstone** ()
-60 (minimum) **MTG**
+- 30 **Hearthstone** ()
+- 60 (minimum) **MTG**
 
 ##Amount of cards in hand##
-8 **Castle Wars**
-7 **MTG**
-3-4 **Hearthstone** (Starting player gets less)
+- 8 **Castle Wars**
+- 7 **MTG**
+- 3-4 **Hearthstone** (Starting player gets less)
 
 ## Card ideas
 - A card that becomes more powerful the longer the game lasts (include counter),
