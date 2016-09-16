@@ -1,6 +1,5 @@
 # Deckard
-A two-player deck building based card game where the idea is to have a wide variety of different cards and exciting gameplay.
-
+Kahden pelaajan vuoropohjainen pakanrakennuskorttipeli jonka ideana on sisältää hyvin monenlaisia kortteja, sekä hauskaa pelaamista.
 
 ###Dokumentaatio
 [Aiheen kuvaus](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)  
