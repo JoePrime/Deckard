@@ -1,0 +1,9 @@
+Logic\Main.class
+Logic\Deck.class
+Logic\Player.class
+Logic\Card.class
+Logic\Cards\AttackCard.class
+Logic\Account.class
+Logic\Cards\DefenseCard.class
+Logic\Cards\BypassAttackCard.class
+Logic\Hand.class
