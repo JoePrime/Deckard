@@ -14,12 +14,16 @@ public class PlayerTest {
     
     private Player pelaaja;
     
+    
     @Before
     
     @Test
-    public void pelaajanNimiLuodaanOikein() {
+    public void pelaajaLuodaanOikein() {
         Player matti = new Player("Matti");
         assertEquals("Matti", matti.getNimi());
+        assertEquals("pelipakka", matti.getPakka().getNimi());
     }
+    
+    
     
 }

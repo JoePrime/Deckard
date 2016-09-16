@@ -6,10 +6,16 @@ import java.util.HashMap;
 // Pakassa kortin avain on sen nimi ja Integer on sen maara.
 public class Deck {
 
+    String nimi;
     private HashMap<Card, Integer> kortit;
 
-    public Deck() {
+    public Deck(String nimi) {
         kortit = new HashMap<Card, Integer>();
+        this.nimi = nimi;
+    }
+    
+    public String getNimi() {
+        return this.nimi;
     }
 
     public void lisaaKortteja(Card kortti, int maara) {
@@ -47,6 +53,7 @@ public class Deck {
             kortit.remove(kortti);
         }
     }
+    
 
     public void tyhjenna() {
         kortit = new HashMap<Card, Integer>();

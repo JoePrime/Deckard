@@ -15,10 +15,16 @@ public class DeckTest {
 
     @Before
     public void pakanLuonti() {
-        this.pakka = new Deck();
+        this.pakka = new Deck("pakka");
         this.kortti = new Card("Testikortti", 0, "Pakkojen testaamiseen");
     }
     
+    @Test
+    public void pakanLuontiToimii() {
+        Deck testipakka = new Deck("testipakka");
+        assertEquals("testipakka", testipakka.getNimi());
+    }
+            
     @Test
     public void pakkaanLisaysToimii() {
         pakka.lisaaKortteja(kortti, 6);
