@@ -16,10 +16,11 @@
 - 3-4 **Hearthstone** (Starting player gets less)
 
 ## Card ideas
-- A card that becomes more powerful the longer the game lasts (include counter),
+- A card that becomes more powerful the longer the game lasts (include a turn counter!),
 maybe +1 attack for every 10 turns
 - Card with a random power
 - Draw two more cards from the deck
+- Cards that are more/less powerful depending on your remaining health/armor/mana.
 
 ## Other ideas
 - In the beginning of the game you have to choose a faction(color). This gives
