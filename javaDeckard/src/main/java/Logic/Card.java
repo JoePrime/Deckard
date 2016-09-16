@@ -1,5 +1,5 @@
 
-package Logic.Cards;
+package Logic;
 
 public class Card {
 
@@ -8,7 +8,9 @@ public class Card {
     String kuvaus;
     
     public Card(String nimi, int mana, String kuvaus) {
-        
+        this.nimi = nimi;
+        this.mana = mana;
+        this.kuvaus = kuvaus;
     }
 
     public String getNimi() {
