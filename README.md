@@ -1,6 +1,7 @@
 # Deckard
-Pakanrakennuspohjainen korttipeli
+A two-player deck building based card game where the idea is to have a wide variety of different cards and exciting gameplay.
 
-Woah, täällä on jo jotain.
 
-Tätä on muokattu.
+#Dokumentaatio
+[Aiheen kuvaus](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)
+[Tuntikirjanpito](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/tuntikirjanpito.md)
