@@ -10,5 +10,7 @@ public class Main {
 
         Player pelaaja1 = new Player(lukija.nextLine());
         Player pelaaja2 = new Player(lukija.nextLine());
+        
+        
     }
 }
