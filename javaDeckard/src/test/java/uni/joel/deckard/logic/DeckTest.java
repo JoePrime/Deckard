@@ -52,6 +52,8 @@ public class DeckTest {
         pakka.lisaaKortteja(kortti, 10);
         pakka.poistaKorttia(kortti, 5);
         assertEquals(5, pakka.kortinMaara(kortti));
+        pakka.poistaKorttia(kortti, 5);
+        assertEquals(0, pakka.kortinMaara(kortti));
     }
     
     @Test
