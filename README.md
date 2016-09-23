@@ -1,6 +1,6 @@
 # Deckard
-Pakanrakennuspohjainen korttipeli
+Kahden pelaajan vuoropohjainen pakanrakennuskorttipeli jonka ideana on sisältää hyvin monenlaisia kortteja, sekä hauskaa pelaamista.
 
-Woah, täällä on jo jotain.
-
-Tätä on muokattu.
+###Dokumentaatio
+[Aiheen kuvaus](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)  
+[Tuntikirjanpito](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/tuntikirjanpito.md)
