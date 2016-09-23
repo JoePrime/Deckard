@@ -1,11 +1,11 @@
-![Linkki](http://yuml.me/884be79a)
+![Linkki](http://yuml.me/0ff21eee)
 
 [Peli]++-2[Pelaaja]
-[Pakka]-[Kortti]
-[note: Pakan korttimäärä päättämättä. Tili vaaditaan pakkojen tallentamiseen. {bg:cornsilk}]
-[Pakkavarasto]-[Pakka]
-[Pelaaja]-1[Pakka]
-[Pelaaja]++-[Käsi]
-[Käsi]-[Kortti]
-[Tili]-[Pakka]
+[Pakka]*-[Kortti]
+[note: Pakan ja käden korttimäärä päättämättä. Tili vaaditaan pakkojen tallentamiseen. {bg:cornsilk}] 
+[Pakkavarasto]1-*[Pakka]
+ [Pelaaja]-1[Pakka]
+ [Pelaaja]++-[Käsi] 
+[Käsi]0..2-[Kortti]
+[Tili]-[Pakka] 
 [Pelaaja]1-0..1[Tili] 
