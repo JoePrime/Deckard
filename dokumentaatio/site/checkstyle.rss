@@ -25,8 +25,8 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 9,
-             Errors: 9,
+      <title>File: 13,
+             Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Card.java">Logic/Card.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.Player.java">uni/joel/deckard/logic/Player.java</a>
                 </td>
                 <td>
                   0
@@ -55,12 +55,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Player.java">Logic/Player.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.cards.DefenseCard.java">uni/joel/deckard/logic/cards/DefenseCard.java</a>
                 </td>
                 <td>
                   0
@@ -69,12 +69,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Cards.BypassAttackCard.java">Logic/Cards/BypassAttackCard.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.ui.Testiluokka.java">uni/joel/deckard/ui/Testiluokka.java</a>
                 </td>
                 <td>
                   0
@@ -83,12 +83,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Cards.AttackCard.java">Logic/Cards/AttackCard.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.Account.java">uni/joel/deckard/logic/Account.java</a>
                 </td>
                 <td>
                   0
@@ -97,12 +97,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Main.java">Logic/Main.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.Deck.java">uni/joel/deckard/logic/Deck.java</a>
                 </td>
                 <td>
                   0
@@ -111,12 +111,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Deck.java">Logic/Deck.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.Card.java">uni/joel/deckard/logic/Card.java</a>
                 </td>
                 <td>
                   0
@@ -125,12 +125,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Cards.DefenseCard.java">Logic/Cards/DefenseCard.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.ui.Main.java">uni/joel/deckard/ui/Main.java</a>
                 </td>
                 <td>
                   0
@@ -139,12 +139,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Hand.java">Logic/Hand.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.cards.BypassAttackCard.java">uni/joel/deckard/logic/cards/BypassAttackCard.java</a>
                 </td>
                 <td>
                   0
@@ -153,12 +153,12 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
                 </td>
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#Logic.Account.java">Logic/Account.java</a>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.ui.Login.java">uni/joel/deckard/ui/Login.java</a>
                 </td>
                 <td>
                   0
@@ -167,7 +167,63 @@ under the License.
                   0
                 </td>
                 <td>
-                  1
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.cards.AttackCard.java">uni/joel/deckard/logic/cards/AttackCard.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.Hand.java">uni/joel/deckard/logic/Hand.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.Main.java">uni/joel/deckard/Main.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#uni.joel.deckard.logic.Main.java">uni/joel/deckard/logic/Main.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
                 </td>
               </tr>
                       </tbody>
