@@ -4,6 +4,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
+import javax.swing.JLabel;
 
 public class Login implements Runnable {
 
@@ -24,9 +25,12 @@ public class Login implements Runnable {
         frame.pack();
         
         frame.setVisible(true);
+        
     }
     
     private void luoKomponentit(Container container) {
+        JLabel teksti = new JLabel("Kirjoita nimimerkki");
+        container.add(teksti);
     }
 
     public JFrame getFrame() {
