@@ -1,5 +1,5 @@
 
-package uni.joel.deckard.logic;
+package uni.joel.deckard.logic.cards;
 
 public class Card {
 

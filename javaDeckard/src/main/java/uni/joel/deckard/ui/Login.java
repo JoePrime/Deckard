@@ -10,7 +10,7 @@ public class Login implements Runnable {
     private JFrame frame;
 
     public Login() {
-
+        frame = new JFrame();
     }
 
     @Override

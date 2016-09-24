@@ -1,6 +1,6 @@
 package uni.joel.deckard.logic;
 
-import uni.joel.deckard.logic.Card;
+import uni.joel.deckard.logic.cards.Card;
 import uni.joel.deckard.logic.Deck;
 import org.junit.After;
 import org.junit.AfterClass;

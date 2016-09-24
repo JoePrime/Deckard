@@ -1,5 +1,6 @@
 package uni.joel.deckard.logic;
 
+import uni.joel.deckard.logic.cards.Card;
 import java.util.ArrayList;
 import java.util.HashMap;
 

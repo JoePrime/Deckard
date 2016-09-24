@@ -1,5 +1,7 @@
 
-package uni.joel.deckard.logic;
+package uni.joel.deckard.player;
+
+import uni.joel.deckard.logic.Deck;
 
 public class Player {
     

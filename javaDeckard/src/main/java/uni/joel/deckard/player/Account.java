@@ -1,7 +1,8 @@
 
-package uni.joel.deckard.logic;
+package uni.joel.deckard.player;
 
 import java.util.HashMap;
+import uni.joel.deckard.logic.Deck;
 
 public class Account {
     
@@ -10,7 +11,7 @@ public class Account {
 
     public Account(String nimi) {
         this.nimi = nimi;
-        pakat = new HashMap<String, Deck>();
+        pakat = new HashMap();
     }
     
     // Muokkaa, entä jos on jo tuon niminen pakka?

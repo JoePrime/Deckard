@@ -1,5 +1,6 @@
 package uni.joel.deckard;
 
+import uni.joel.deckard.player.Player;
 import java.util.Scanner;
 import uni.joel.deckard.logic.*;
 
