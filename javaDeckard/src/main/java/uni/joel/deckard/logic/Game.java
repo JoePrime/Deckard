@@ -5,9 +5,12 @@ import javax.swing.SwingUtilities;
 
 public class Game {
 
-    public static void main(String[] args) {
-        Login syotaNimet = new Login();
-
-        SwingUtilities.invokeLater(syotaNimet);
+    public void Game() {
+        
+    }
+    
+    public void uusi() {
+        Login kirjautuminen = new Login();
+        SwingUtilities.invokeLater(kirjautuminen);
     }
 }

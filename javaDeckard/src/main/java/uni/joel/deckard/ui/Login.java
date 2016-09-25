@@ -1,5 +1,6 @@
 package uni.joel.deckard.ui;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import javax.swing.JFrame;
@@ -17,7 +18,7 @@ public class Login implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Kirjautuminen");
-        frame.setPreferredSize(new Dimension(1000, 500));
+        frame.setPreferredSize(new Dimension(1280, 720));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         
         luoKomponentit(frame.getContentPane());
@@ -29,8 +30,8 @@ public class Login implements Runnable {
     }
     
     private void luoKomponentit(Container container) {
-        JLabel teksti = new JLabel("Kirjoita nimimerkki");
-        container.add(teksti);
+        JLabel teksti = new JLabel("Anna nimimerkki");
+        container.add(teksti, BorderLayout.CENTER);
     }
 
     public JFrame getFrame() {
