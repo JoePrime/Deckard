@@ -6,4 +6,5 @@ Päivä | Tunnit | Kuvaus
 16.9.2016 | 6 | Ohjelman rungon rakentamista ja raporttien tekoa.
 24.9.2016 | 4 | Pakettien nimien muuttamista, jokusen testin lisääminen ja graafisen käyttöliittymän aloittaminen.
 25.9.2016 | 3 | Koodikatselmointi
+26.9.2016 | 2 | Login-ikkunan luonti ja muuta muokkaamista
 ... | ... | ...
