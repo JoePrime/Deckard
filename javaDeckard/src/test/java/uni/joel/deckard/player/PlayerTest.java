@@ -20,8 +20,8 @@ public class PlayerTest {
     @Test
     public void pelaajaLuodaanOikein() {
         Player matti = new Player("Matti");
-        assertEquals("Matti", matti.getNimi());
-        assertEquals("pelipakka", matti.getPakka().getNimi());
+        assertEquals("Matti", matti.getName());
+        assertEquals("pelipakka", matti.getDeck().getNimi());
     }
     
     
