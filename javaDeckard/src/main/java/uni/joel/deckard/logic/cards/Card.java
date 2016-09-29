@@ -3,22 +3,22 @@ package uni.joel.deckard.logic.cards;
 
 public class Card {
 
-    String nimi;
+    String name;
     int mana;
-    String kuvaus;
+    String desc;
     
-    public Card(String nimi, int mana, String kuvaus) {
-        this.nimi = nimi;
+    public Card(String name, int mana, String desc) {
+        this.name = name;
         this.mana = mana;
-        this.kuvaus = kuvaus;
+        this.desc = desc;
     }
 
-    public String getNimi() {
-        return nimi;
+    public String getName() {
+        return name;
     }
 
-    public void setNimi(String nimi) {
-        this.nimi = nimi;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getMana() {
@@ -29,12 +29,12 @@ public class Card {
         this.mana = mana;
     }
 
-    public String getKuvaus() {
-        return kuvaus;
+    public String getDesc() {
+        return desc;
     }
 
-    public void setKuvaus(String kuvaus) {
-        this.kuvaus = kuvaus;
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
     
 }

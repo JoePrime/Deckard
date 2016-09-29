@@ -12,9 +12,9 @@ public class Game {
 
     }
 
-    public void uusi() {
-        Login kirjautuminen = new Login(this);
-        SwingUtilities.invokeLater(kirjautuminen);
+    public void newGame() {
+        Login loginscreen = new Login(this);
+        SwingUtilities.invokeLater(loginscreen);
     }
 
     public void setPlayer1(Player player1) {

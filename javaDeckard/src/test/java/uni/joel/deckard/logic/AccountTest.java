@@ -12,17 +12,17 @@ import static org.junit.Assert.*;
 
 public class AccountTest {
     
-    private Account tili;
+    private Account account;
     
     @Before
-    public void luoTili() {
-        tili = new Account("testitili");
+    public void createAccount() {
+        account = new Account("testAccount");
     }
     
-    // pakalla on nimi, mutta silti nimi pitää lisätä. Päällekkäisyyttä. KORJAA!
+    // Deck has a name, yet the name still has to be added. FIX!
     @Test
-    public void pakanLisaysOnnistuu() {
-        Deck pakka = new Deck("testipakka");
-        tili.lisaaPakka("testipakka", pakka);
+    public void addingDeckWorks() {
+        Deck deck = new Deck("testDeck");
+        account.addDeck("testDeck", deck);
     }
 }

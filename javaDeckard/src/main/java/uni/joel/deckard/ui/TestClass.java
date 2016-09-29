@@ -6,16 +6,16 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
-public class Testiluokka implements Runnable {
+public class TestClass implements Runnable {
 
     private JFrame frame;
 
-    public Testiluokka() {
+    public TestClass() {
     }
 
     @Override
     public void run() {
-        frame = new JFrame("Otsikko");
+        frame = new JFrame("Headline");
         frame.setPreferredSize(new Dimension(200, 100));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);

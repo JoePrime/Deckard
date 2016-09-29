@@ -13,13 +13,13 @@ public class Player {
     int mana = 10;
     int manaProduction = 3;
 
-    public Player(String nimi) {
-        this.name = nimi;
-        deck = new Deck("pelipakka");
+    public Player(String name) {
+        this.name = name;
+        deck = new Deck("game deck");
     }
 
     public String toString() {
-        return "Pelaaja: " + name;
+        return "Player: " + name;
     }
 
     public String getName() {

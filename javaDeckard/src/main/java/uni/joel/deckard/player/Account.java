@@ -6,17 +6,17 @@ import uni.joel.deckard.logic.Deck;
 
 public class Account {
     
-    String nimi;
-    HashMap<String, Deck> pakat;
+    String name;
+    HashMap<String, Deck> decks;
 
-    public Account(String nimi) {
-        this.nimi = nimi;
-        pakat = new HashMap();
+    public Account(String name) {
+        this.name = name;
+        decks = new HashMap();
     }
     
     // Muokkaa, entä jos on jo tuon niminen pakka?
-    public void lisaaPakka(String nimi, Deck pakka) {
-        pakat.put(nimi, pakka);
+    public void addDeck(String name, Deck deck) {
+        decks.put(name, deck);
     }
     
 }

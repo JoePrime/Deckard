@@ -12,16 +12,16 @@ import static org.junit.Assert.*;
 
 public class PlayerTest {
     
-    private Player pelaaja;
+    private Player player;
     
     
     @Before
     
     @Test
-    public void pelaajaLuodaanOikein() {
+    public void playerCreatedCorrectly() {
         Player matti = new Player("Matti");
         assertEquals("Matti", matti.getName());
-        assertEquals("pelipakka", matti.getDeck().getNimi());
+        assertEquals("game deck", matti.getDeck().getName());
     }
     
     

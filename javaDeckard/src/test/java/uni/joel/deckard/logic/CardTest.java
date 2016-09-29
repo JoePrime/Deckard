@@ -11,14 +11,14 @@ import static org.junit.Assert.*;
 
 public class CardTest {
 
-    private Card kortti;
+    private Card card;
     
     @Test
-    public void korttiLuodaanOikein() {
-        this.kortti = new Card("Soturi", 5, "Iskee vihollista.");
-        assertEquals("Soturi", kortti.getNimi());
-        assertEquals(5, kortti.getMana());
-        assertEquals("Iskee vihollista.", kortti.getKuvaus());
+    public void newCardCreatedCorrectly() {
+        this.card = new Card("Warrior", 5, "Strikes the enemy.");
+        assertEquals("Warrior", card.getName());
+        assertEquals(5, card.getMana());
+        assertEquals("Strikes the enemy.", card.getDesc());
     }
     
 }

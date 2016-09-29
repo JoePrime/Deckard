@@ -7,57 +7,57 @@ import java.util.HashMap;
 // Pakassa kortin avain on sen nimi ja Integer on sen maara.
 public class Deck {
 
-    String nimi;
-    private HashMap<Card, Integer> kortit;
+    String name;
+    private HashMap<Card, Integer> cards;
 
-    public Deck(String nimi) {
-        kortit = new HashMap<Card, Integer>();
-        this.nimi = nimi;
+    public Deck(String name) {
+        cards = new HashMap<Card, Integer>();
+        this.name = name;
     }
     
-    public String getNimi() {
-        return this.nimi;
+    public String getName() {
+        return this.name;
     }
 
-    public void lisaaKortteja(Card kortti, int maara) {
-        if (maara > 0) {
-            if (kortit.containsKey(kortti)) {
-                kortit.replace(kortti, maara + kortit.get(kortti));
+    public void addCards(Card card, int amount) {
+        if (amount > 0) {
+            if (cards.containsKey(card)) {
+                cards.replace(card, amount + cards.get(card));
             } else {
-                kortit.put(kortti, maara);
+                cards.put(card, amount);
             }
         }
     }
 
-    public int kortinMaara(Card kortti) {
-        if (kortit.containsKey(kortti)) {
-            return kortit.get(kortti);
+    public int amountOfCard(Card card) {
+        if (cards.containsKey(card)) {
+            return cards.get(card);
         }
         return 0;
     }
 
-    public void poistaKorttia(Card kortti, int poisMaara) {
-        if (poisMaara >= 1) {
-            if (kortit.containsKey(kortti)) {
-                int nykymaara = kortit.get(kortti);
-                if (poisMaara >= nykymaara) {
-                    kortit.remove(kortti);
+    public void removeCardAmount(Card card, int toRemove) {
+        if (toRemove >= 1) {
+            if (cards.containsKey(card)) {
+                int nykymaara = cards.get(card);
+                if (toRemove >= nykymaara) {
+                    cards.remove(card);
                 } else {
-                    kortit.replace(kortti, nykymaara - poisMaara);
+                    cards.replace(card, nykymaara - toRemove);
                 }
             }
         }
     }
 
-    public void poistaKorttiaKaikki(Card kortti) {
-        if (kortit.containsKey(kortti)) {
-            kortit.remove(kortti);
+    public void removeCardAll(Card card) {
+        if (cards.containsKey(card)) {
+            cards.remove(card);
         }
     }
     
 
-    public void tyhjenna() {
-        kortit = new HashMap<Card, Integer>();
+    public void empty() {
+        cards = new HashMap<Card, Integer>();
 
     }
 }

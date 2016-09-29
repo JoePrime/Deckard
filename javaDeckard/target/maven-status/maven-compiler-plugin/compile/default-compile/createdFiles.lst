@@ -6,7 +6,6 @@ uni\joel\deckard\logic\Game.class
 uni\joel\deckard\logic\cards\AttackCard.class
 uni\joel\deckard\logic\cards\Card.class
 uni\joel\deckard\Main.class
-uni\joel\deckard\ui\Testiluokka.class
 uni\joel\deckard\logic\Main.class
 uni\joel\deckard\logic\Hand.class
 uni\joel\deckard\ui\Login.class
