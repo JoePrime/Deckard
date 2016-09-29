@@ -2,7 +2,6 @@ package uni.joel.deckard.logic;
 
 import uni.joel.deckard.ui.*;
 import javax.swing.SwingUtilities;
-import uni.joel.deckard.player.Player;
 
 public class Game {
 

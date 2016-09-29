@@ -1,4 +1,4 @@
-package uni.joel.deckard.player;
+package uni.joel.deckard.logic;
 
 import uni.joel.deckard.logic.Deck;
 import uni.joel.deckard.logic.Hand;

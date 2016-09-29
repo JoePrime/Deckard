@@ -1,7 +1,7 @@
 
 package uni.joel.deckard.player;
 
-import uni.joel.deckard.player.Player;
+import uni.joel.deckard.logic.Player;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

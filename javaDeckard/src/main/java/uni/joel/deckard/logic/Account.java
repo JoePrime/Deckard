@@ -1,5 +1,5 @@
 
-package uni.joel.deckard.player;
+package uni.joel.deckard.logic;
 
 import java.util.HashMap;
 import uni.joel.deckard.logic.Deck;

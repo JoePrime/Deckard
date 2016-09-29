@@ -6,7 +6,7 @@ import java.awt.Dimension;
 import java.awt.event.*;
 import javax.swing.*;
 import uni.joel.deckard.logic.Game;
-import uni.joel.deckard.player.Player;
+import uni.joel.deckard.logic.Player;
 
 public class Login implements Runnable {
 

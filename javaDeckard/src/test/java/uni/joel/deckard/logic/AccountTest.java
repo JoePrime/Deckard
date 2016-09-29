@@ -2,7 +2,6 @@
 package uni.joel.deckard.logic;
 
 import uni.joel.deckard.logic.Deck;
-import uni.joel.deckard.player.Account;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
