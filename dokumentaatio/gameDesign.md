@@ -21,6 +21,8 @@ maybe +1 attack for every 10 turns
 - Card with a random power
 - Draw two more cards from the deck
 - Cards that are more/less powerful depending on your remaining health/armor/mana.
+- Card that is more powerful the longer the game has lasted.
+- Combo cards
 
 ## Other ideas
 - In the beginning of the game you have to choose a faction(color). This gives
