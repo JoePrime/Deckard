@@ -7,4 +7,5 @@ Päivä | Tunnit | Kuvaus
 24.9.2016 | 4 | Pakettien nimien muuttamista, jokusen testin lisääminen ja graafisen käyttöliittymän aloittaminen.
 25.9.2016 | 3 | Koodikatselmointi
 26.9.2016 | 2 | Login-ikkunan luonti ja muuta muokkaamista
+30.9.2016 | 3 | Javadoccien lisäys luokille sekä toiminnallisuuden lisäämistä päätavoitteena saada hyökkäyskortin käyttäminen toimimaan
 ... | ... | ...
