@@ -8,7 +8,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import uni.joel.deckard.logic.cards.AttackCard;
 
+/**
+ * Tests the Deck class.
+*/
 public class DeckTest {
 
     private Deck deck;
@@ -17,7 +21,7 @@ public class DeckTest {
     @Before
     public void createDeck() {
         this.deck = new Deck("deck");
-        this.card = new Card("test card", 0, "For testing decks");
+        this.card = new AttackCard("test card", 0, "For testing decks");
     }
     
     @Test

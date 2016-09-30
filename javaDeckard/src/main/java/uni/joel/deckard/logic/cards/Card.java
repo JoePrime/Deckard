@@ -1,7 +1,12 @@
 
 package uni.joel.deckard.logic.cards;
 
-public class Card {
+/**
+ * Abstract Card class used a base for all the other card classes.
+ * All cards have a name, a cost (mana) and a description.
+ * @author Joel
+ */
+public abstract class Card {
 
     String name;
     int mana;
@@ -13,6 +18,10 @@ public class Card {
         this.desc = desc;
     }
 
+    public void invoke() {
+        
+    }
+    
     public String getName() {
         return name;
     }

@@ -4,7 +4,13 @@ import uni.joel.deckard.logic.cards.Card;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-// Pakassa kortin avain on sen nimi ja Integer on sen maara.
+/**
+ * Deck-class with methods for modifying the cards it contains.
+ * In the cards hashmap the name of the card is the key and its amount is the
+ * value.
+ * 
+ * @author Joel
+ */
 public class Deck {
 
     String name;
@@ -19,6 +25,14 @@ public class Deck {
         return this.name;
     }
 
+    /**
+     * Lisää annetun määrän annettua korttia pakkaan.
+     * 
+     * @param card  Lisättävä kortti
+     * @param amount Lisättävä määrä
+     * 
+     * @see uni.joel.deckard.logic.Battle#useCard(uni.joel.deckard.logic.Player, uni.joel.deckard.logic.cards.Card) 
+     */
     public void addCards(Card card, int amount) {
         if (amount > 0) {
             if (cards.containsKey(card)) {

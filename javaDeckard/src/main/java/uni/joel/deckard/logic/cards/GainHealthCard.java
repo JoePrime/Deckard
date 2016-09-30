@@ -1,6 +1,11 @@
 
 package uni.joel.deckard.logic.cards;
 
+/**
+ * A gainHealthCard increases your health by a set amount.
+ * 
+ * @author Joel
+ */
 public class GainHealthCard extends Card {
     
     String name = "Health Potion";

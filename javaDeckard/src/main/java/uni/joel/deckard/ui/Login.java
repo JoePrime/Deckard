@@ -8,6 +8,12 @@ import javax.swing.*;
 import uni.joel.deckard.logic.Game;
 import uni.joel.deckard.logic.Player;
 
+/**
+ * This initializes, shows and takes care of the functionality of the GUI login
+ * screen.
+ * 
+ * @author Joel
+ */
 public class Login implements Runnable {
 
     private JFrame frame;

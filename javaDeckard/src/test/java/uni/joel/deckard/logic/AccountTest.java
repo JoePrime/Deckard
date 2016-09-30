@@ -9,6 +9,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+/**
+ * Tests the Account class.
+ * 
+ * @author Joel
+ */
 public class AccountTest {
     
     private Account account;

@@ -1,5 +1,5 @@
 
-package uni.joel.deckard.player;
+package uni.joel.deckard.logic;
 
 import uni.joel.deckard.logic.Player;
 import org.junit.After;
@@ -9,7 +9,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
+/**
+ * Tests the Player class.
+ * 
+ * @author Joel
+ */
 public class PlayerTest {
     
     private Player player;

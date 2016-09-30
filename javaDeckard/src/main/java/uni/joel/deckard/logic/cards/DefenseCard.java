@@ -1,6 +1,11 @@
 
 package uni.joel.deckard.logic.cards;
 
+/**
+ * A defense Card increases your armor value by a set amount.
+ * 
+ * @author Joel
+ */
 public class DefenseCard extends Card {
     
     public DefenseCard(String name, int mana, String desc) {

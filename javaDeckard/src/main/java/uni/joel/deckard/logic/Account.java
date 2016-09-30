@@ -4,6 +4,12 @@ package uni.joel.deckard.logic;
 import java.util.HashMap;
 import uni.joel.deckard.logic.Deck;
 
+/**
+ * Creating an account makes it possible to save decks. It is also possible to
+ * play without an account.
+ * 
+ * @author Joel
+ */
 public class Account {
     
     String name;

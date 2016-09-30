@@ -6,6 +6,11 @@ import java.awt.Dimension;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
 
+/**
+ * A test class for testing stuff.
+ * 
+ * @author Joel
+ */
 public class TestClass implements Runnable {
 
     private JFrame frame;

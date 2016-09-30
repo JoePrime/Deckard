@@ -1,5 +1,12 @@
 package uni.joel.deckard.logic;
 import uni.joel.deckard.logic.cards.Card;
+
+/**
+ * The main part of the game is the battle screen and actions. Those are
+ * controlled here.
+ * 
+ * @author Joel
+ */
 public class Battle {
     
     private Player p1, p2;

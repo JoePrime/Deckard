@@ -3,6 +3,11 @@ package uni.joel.deckard.logic;
 import uni.joel.deckard.ui.*;
 import javax.swing.SwingUtilities;
 
+/**
+ * The game class. Contains the player(s).
+ * 
+ * @author Joel
+ */
 public class Game {
 
     private Player player1;
