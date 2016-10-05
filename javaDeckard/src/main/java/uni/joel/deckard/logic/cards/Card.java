@@ -1,9 +1,9 @@
-
 package uni.joel.deckard.logic.cards;
 
 /**
- * Abstract Card class used a base for all the other card classes.
- * All cards have a name, a cost (mana) and a description.
+ * Abstract Card class used a base for all the other card classes. All cards
+ * have a name, a cost (mana) and a description.
+ *
  * @author Joel
  */
 public abstract class Card {
@@ -11,7 +11,7 @@ public abstract class Card {
     String name;
     int mana;
     String desc;
-    
+
     public Card(String name, int mana, String desc) {
         this.name = name;
         this.mana = mana;
@@ -19,9 +19,22 @@ public abstract class Card {
     }
 
     public void invoke() {
-        
+
     }
-    
+
+    public boolean equals(Card card) {
+        if (this.getClass() == card.getClass()) {
+            if (card.getName().equals(this.name)) {
+                if (card.getMana() == this.mana) {
+                    if (card.getDesc().equals(this.desc)) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     public String getName() {
         return name;
     }
@@ -45,5 +58,5 @@ public abstract class Card {
     public void setDesc(String desc) {
         this.desc = desc;
     }
-    
+
 }

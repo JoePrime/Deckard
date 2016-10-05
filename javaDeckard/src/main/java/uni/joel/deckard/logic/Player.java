@@ -35,6 +35,14 @@ public class Player {
         }
         return false;
     }
+    
+    public void addToHand(Card card) {
+        hand.addCard(card);
+    }
+    
+    public void addToDeck(Card card) {
+        deck.addCards(card, 1);
+    }
 
     public String toString() {
         return "Player: " + name;
