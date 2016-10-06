@@ -9,6 +9,9 @@ import uni.joel.deckard.logic.cards.Card;
  *
  * @author Joel
  */
+
+// This Class is unused for now and has been replaced with an arraylist in the
+// class Player.
 public class Hand {
 
     public ArrayList<Card> cards;

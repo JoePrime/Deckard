@@ -49,20 +49,10 @@ public class AttackCardTest {
         AttackCard differentDesc = new AttackCard("Warrior", 5, "Strikes the enemy");
         DefenseCard differentClass = new DefenseCard("Warrior", 5, "Strikes the enemy.");
 
-        // TOIMIVIA
-        assert (card.equals(identicalCard));
-        assert (!card.equals(differentName));
-        assert (!card.equals(differentMana));
-        assert (!card.equals(differentDesc));
-        assert (!card.equals(differentClass));
-        
-        // EI TOIMI
-        assertEquals(card, identicalCard);
-//        assertThat(identicalCard, is(equalTo(card)));
-//        assertThat(card.equals(identicalCard));
-//        assertThat(card, is(not(equalTo(differentName))));
-//        assertThat(card, is(not(equalTo(differentMana))));
-//        assertThat(card, is(not(equalTo(differentDesc))));
-//        assertThat(card, is(not(equalTo(differentClass))));
+        assertThat(identicalCard, is(equalTo(card)));
+        assertThat(card, is(not(equalTo(differentName))));
+        assertThat(card, is(not(equalTo(differentMana))));
+        assertThat(card, is(not(equalTo(differentDesc))));
+        assertThat(card, is(not(equalTo(differentClass))));
     }
 }

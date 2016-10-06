@@ -19,10 +19,7 @@ public class BattleTest {
     
     @Test
     public void newBattleCreatedCorrectly() {
-//        assertThat(testBattle.getP1().getOpponent(), is(testBattle.getP2()));
-//        assertThat(testBattle.getP2().getOpponent(), is(testBattle.getP1()));
-        
-        assertEquals(testBattle.getP2(), testBattle.getP1().getOpponent());
-        assertEquals(testBattle.getP1(), testBattle.getP2().getOpponent());
+        assertThat(testBattle.getP1().getOpponent(), is(testBattle.getP2()));
+        assertThat(testBattle.getP2().getOpponent(), is(testBattle.getP1()));
     }
 }

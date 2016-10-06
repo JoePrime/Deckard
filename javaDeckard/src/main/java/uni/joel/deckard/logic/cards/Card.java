@@ -21,10 +21,12 @@ public abstract class Card {
     }
 
     public void invoke(Player player) {
-        
+
     }
 
-    public boolean equals(Card card) {
+    @Override
+    public boolean equals(Object obj) {
+        Card card = (Card) obj;
         if (this.getClass() == card.getClass()) {
             if (card.getName().equals(this.name)) {
                 if (card.getMana() == this.mana) {

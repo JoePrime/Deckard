@@ -88,4 +88,8 @@ public class DeckTest {
         assertEquals(10, deck.amountOfCard(card));
     }
     
+    @Test
+    public void emptyingTheDeckWorks() {
+         
+    }
 }
