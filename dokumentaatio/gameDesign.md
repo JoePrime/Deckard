@@ -17,7 +17,7 @@
 
 ## Card ideas
 - A card that becomes more powerful the longer the game lasts (include a turn counter!),
-maybe +1 attack for every 10 turns
+maybe +1 attack for every 10 turns. "Self-sharpening blade gets stronger the longer it is in your hand."
 - Card with a random power
 - Draw two more cards from the deck
 - Cards that are more/less powerful depending on your remaining health/armor/mana.
