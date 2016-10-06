@@ -8,4 +8,6 @@ Kahden pelaajan vuoropohjainen pakanrakennuskorttipeli jonka ideana on sisältä
 [pit-raportti](https://htmlpreview.github.io/?https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/pit-reports/201609240118/index.html)  
 
 
-NEXT: Make tests for the methods in the hand class, and make sure the important methods in the classes below it also have tests.
+TO-DO: Make tests for the methods in the hand class, and make sure the important methods in the classes below it also have tests.  
+Add functionality to more cards.  
+Start the Battle UI.
