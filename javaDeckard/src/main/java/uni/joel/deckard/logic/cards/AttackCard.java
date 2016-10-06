@@ -10,6 +10,7 @@ public class AttackCard extends Card {
         super(name, mana, desc);
     }
     
+    @Override
     public void invoke(Player user) {
         user.getOpponent().lowerHitpoints(damage);
     }

@@ -1,5 +1,7 @@
 package uni.joel.deckard.logic.cards;
 
+import uni.joel.deckard.logic.Player;
+
 /**
  * Abstract Card class used a base for all the other card classes. All cards
  * have a name, a cost (mana) and a description.
@@ -18,8 +20,8 @@ public abstract class Card {
         this.desc = desc;
     }
 
-    public void invoke() {
-
+    public void invoke(Player player) {
+        
     }
 
     public boolean equals(Card card) {

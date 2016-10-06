@@ -18,7 +18,7 @@ public class AttackCardTest {
 
     @Before
     public void createNewCard() {
-        this.card = new AttackCard("Warrior", 5, "Strikes the enemy.");
+        card = new AttackCard("Warrior", 5, "Strikes the enemy.");
     }
 
     @Test
@@ -28,14 +28,15 @@ public class AttackCardTest {
         assertEquals("Strikes the enemy.", card.getDesc());
     }
 
-    // INCOMPLETE
     @Test
     public void reducesOpponentsHealthCorrectly() {
         Player player1 = new Player("player1");
         Player player2 = new Player("player2");
         Battle battle = new Battle(player1, player2);
         player1.addToHand(card);
+        assertEquals(50, player2.getHitpoints());
         player1.useCard(card);
+        assertEquals(37, player2.getHitpoints());
     }
 
     // Can't compare different classes? First commented line doesn't work.
@@ -48,14 +49,16 @@ public class AttackCardTest {
         AttackCard differentDesc = new AttackCard("Warrior", 5, "Strikes the enemy");
         DefenseCard differentClass = new DefenseCard("Warrior", 5, "Strikes the enemy.");
 
+        // TOIMIVIA
         assert (card.equals(identicalCard));
         assert (!card.equals(differentName));
         assert (!card.equals(differentMana));
         assert (!card.equals(differentDesc));
-//        assert (!card.equals(differentClass));
+        assert (!card.equals(differentClass));
         
-//        assertEquals(card, identicalCard);
-        assertThat(identicalCard, is(equalTo(card)));
+        // EI TOIMI
+        assertEquals(card, identicalCard);
+//        assertThat(identicalCard, is(equalTo(card)));
 //        assertThat(card.equals(identicalCard));
 //        assertThat(card, is(not(equalTo(differentName))));
 //        assertThat(card, is(not(equalTo(differentMana))));

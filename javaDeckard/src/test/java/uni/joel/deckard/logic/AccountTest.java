@@ -1,6 +1,7 @@
 
 package uni.joel.deckard.logic;
 
+import static org.hamcrest.CoreMatchers.*;
 import uni.joel.deckard.logic.Deck;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -22,11 +23,16 @@ public class AccountTest {
     public void createAccount() {
         account = new Account("testAccount");
     }
-    
-    // Deck has a name, yet the name still has to be added. FIX!
+
+    @Test
+    public void newAccountCreatedCorrectly() {
+        assertThat(account.getName(), is("testAccount"));
+        assertTrue(account.getDecks().isEmpty());
+    }
     @Test
     public void addingDeckWorks() {
         Deck deck = new Deck("testDeck");
         account.addDeck("testDeck", deck);
+        assertThat(account.getDecks().get("testDeck"), is(deck));
     }
 }

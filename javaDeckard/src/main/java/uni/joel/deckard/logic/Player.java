@@ -1,7 +1,5 @@
 package uni.joel.deckard.logic;
 
-import uni.joel.deckard.logic.Deck;
-import uni.joel.deckard.logic.Hand;
 import uni.joel.deckard.logic.cards.Card;
 import java.lang.Math;
 
@@ -25,12 +23,13 @@ public class Player {
     public Player(String name) {
         this.name = name;
         deck = new Deck("game deck");
+        hand = new Hand();
     }
 
     // Must add card comparator!!
     public boolean useCard(Card card) {
         if (hand.contains(card)) {
-            card.invoke();
+            card.invoke(this);
             return true;
         }
         return false;
@@ -44,16 +43,9 @@ public class Player {
         deck.addCards(card, 1);
     }
 
+    @Override
     public String toString() {
         return "Player: " + name;
-    }
-
-    public Player getOpponent() {
-        return opponent;
-    }
-
-    public void setOpponent(Player opponent) {
-        this.opponent = opponent;
     }
 
     public String getName() {
@@ -94,7 +86,7 @@ public class Player {
     }
     
     public int lowerHitpoints(int amount) {
-        hitpoints = Math.max(hitpoints + amount, 0);
+        hitpoints = Math.max(hitpoints - amount, 0);
         return hitpoints;
     }
 
@@ -120,6 +112,14 @@ public class Player {
 
     public void setManaProduction(int manaProduction) {
         this.manaProduction = manaProduction;
+    }
+    
+    public Player getOpponent() {
+        return this.opponent;
+    }
+    
+    public void setOpponent(Player newOpponent) {
+        this.opponent = newOpponent;
     }
 
 }

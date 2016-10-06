@@ -1,5 +1,6 @@
 package uni.joel.deckard.logic;
 
+import static org.hamcrest.CoreMatchers.*;
 import uni.joel.deckard.logic.cards.Card;
 import uni.joel.deckard.logic.Deck;
 import org.junit.After;
@@ -25,19 +26,20 @@ public class DeckTest {
     }
     
     @Test
-    public void CreatingDeckWorks() {
+    public void creatingDeckWorks() {
         Deck testDeck = new Deck("test deck");
         assertEquals("test deck", testDeck.getName());
     }
             
     @Test
-    public void AddingToDeckWorks() {
+    public void addingToDeckWorks() {
         deck.addCards(card, 6);
-        assertEquals(6, deck.amountOfCard(card));
+        deck.addCards(card, 1);
+        assertEquals(7, deck.amountOfCard(card));
     }
     
     @Test
-    public void AddingBadAmountDoesNotWork() {
+    public void addingBadAmountDoesNotWork() {
         deck.addCards(card, 0);
         assertEquals(0, deck.amountOfCard(card));
         deck.addCards(card, -5);
@@ -45,14 +47,14 @@ public class DeckTest {
     }
     
     @Test
-    public void AddingExistingCardRaisesAmount() {
+    public void addingExistingCardRaisesAmount() {
         deck.addCards(card, 5);
         deck.addCards(card, 8);
         assertEquals(13, deck.amountOfCard(card));
     }
     
     @Test
-    public void RemovingCardWorks() {
+    public void removingCardWorks() {
         deck.addCards(card, 10);
         deck.removeCardAmount(card, 5);
         assertEquals(5, deck.amountOfCard(card));
@@ -61,14 +63,14 @@ public class DeckTest {
     }
     
     @Test
-    public void RemovingAllOfCardWorks() {
+    public void removingAllOfCardWorks() {
         deck.addCards(card, 1000);
         deck.removeCardAll(card);
         assertEquals(0, deck.amountOfCard(card));
     }
     
     @Test
-    public void RemovingInexistantCardDoesNothing() {
+    public void removingInexistantCardDoesNothing() {
         deck.removeCardAmount(card, 10);
         assertEquals(0, deck.amountOfCard(card));
         deck.removeCardAll(card);
@@ -76,7 +78,7 @@ public class DeckTest {
     }
     
     @Test
-    public void RemovingErronousAmountDoesNotWork() {
+    public void removingErronousAmountDoesNotWork() {
         deck.removeCardAmount(card, -5);
         assertEquals(0, deck.amountOfCard(card));
         deck.addCards(card, 10);
@@ -85,4 +87,5 @@ public class DeckTest {
         deck.removeCardAmount(card, -1);
         assertEquals(10, deck.amountOfCard(card));
     }
+    
 }

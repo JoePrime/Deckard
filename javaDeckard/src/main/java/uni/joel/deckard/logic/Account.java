@@ -19,10 +19,28 @@ public class Account {
         this.name = name;
         decks = new HashMap();
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
     
     // Muokkaa, entä jos on jo tuon niminen pakka?
     public void addDeck(String name, Deck deck) {
         decks.put(name, deck);
     }
+
+    public HashMap<String, Deck> getDecks() {
+        return decks;
+    }
+
+    public void setDecks(HashMap<String, Deck> decks) {
+        this.decks = decks;
+    }
+    
+    
     
 }
