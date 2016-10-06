@@ -9,4 +9,5 @@ Päivä | Tunnit | Kuvaus
 26.9.2016 | 2 | Login-ikkunan luonti ja muuta muokkaamista
 30.9.2016 | 3 | Javadoccien lisäys luokille sekä toiminnallisuuden lisäämistä päätavoitteena saada hyökkäyskortin käyttäminen toimimaan
 5.10.2016 | 2 | Lisätty equals-metodi Card-luokalle ja sille huonosti toimiva testi
+6.10.2016 | 3 | Card luokan equals-metodi korjattu, testit toimivat.
 ... | ... | ...
