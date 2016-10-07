@@ -26,7 +26,10 @@ public class Player {
         hand = new Hand();
     }
 
-    // Must add card comparator!!
+    public void drawCard() {
+        hand.addCard(deck.newCard());
+    }
+    
     public boolean useCard(Card card) {
         if (hand.amountOfCard(card) > 0) {
             card.invoke(this);

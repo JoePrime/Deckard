@@ -1,6 +1,6 @@
-
 package uni.joel.deckard.logic;
 
+import static org.hamcrest.CoreMatchers.is;
 import uni.joel.deckard.logic.Player;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -8,26 +8,92 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import uni.joel.deckard.logic.cards.Card;
+import uni.joel.deckard.logic.cards.TestCard;
 
 /**
  * Tests the Player class.
- * 
+ *
  * @author Joel
  */
 public class PlayerTest {
-    
-    private Player player;
-    
-    
+
+    private Player matti;
+    private TestCard card;
+    private TestCard card2;
+
     @Before
-    
+    public void createNewPlayer() {
+        matti = new Player("Matti");
+        card = new TestCard("A testcard", 5, "for testing purposes");
+        card2 = new TestCard("Another testcard", 5, "for testing purposes");
+    }
+
     @Test
     public void playerCreatedCorrectly() {
-        Player matti = new Player("Matti");
         assertEquals("Matti", matti.getName());
         assertEquals("game deck", matti.getDeck().getName());
     }
+
+    @Test
+    public void drawingCardWorksCorrectly() {
+        Deck deck = matti.getDeck();
+        deck.addCards(card, 5);
+        assertTrue(matti.getHand().getCards().isEmpty());
+        matti.drawCard();
+        assertTrue(matti.getHand().getCards().containsKey(card));
+    }
+
+    @Test
+    public void usingCardThatIsInHandWorks() {
+        Deck deck = matti.getDeck();
+        deck.addCards(card, 5);
+        matti.drawCard();
+        assertTrue(matti.getHand().getCards().containsKey(card));
+        matti.useCard(card);
+        assertTrue(matti.getHand().getCards().isEmpty());
+    }
+
+    @Test
+    public void usingCardNotInHandDoesNotWork() {
+        Deck deck = matti.getDeck();
+        deck.addCards(card, 1);
+        matti.drawCard();
+        assertTrue(matti.getHand().getCards().containsKey(card));
+        matti.useCard(card2);
+        assertTrue(matti.getHand().getCards().containsKey(card));
+        assertFalse(matti.getHand().getCards().containsKey(card2));
+    }
+
+    @Test
+    public void addingToHandWorks() {
+        matti.addToHand(card);
+        assertTrue(matti.getHand().getCards().containsKey(card));
+        assertFalse(matti.getHand().getCards().containsKey(card2));
+        matti.addToHand(card2);
+        assertTrue(matti.getHand().getCards().containsKey(card2));
+    }
+
+    @Test
+    public void addingToDeckWorks() {
+        matti.addToDeck(card);
+        assertTrue(matti.getDeck().getCards().containsKey(card));
+        assertFalse(matti.getDeck().getCards().containsKey(card2));
+        matti.addToDeck(card2);
+        assertTrue(matti.getDeck().getCards().containsKey(card2));
+    }
     
-    
-    
+    @Test
+    public void changingHitpointsWorksCorrectly() {
+        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints));
+        matti.changeHitpointsBy(10);
+        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints));
+        matti.changeHitpointsBy(0);
+        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints + 10));
+        matti.changeHitpointsBy(-20);
+        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints + 10));
+        matti.changeHitpointsBy(120);
+        assertThat(matti.getHitpoints(), is(Player.maxHitpoints));
+        
+    }
 }

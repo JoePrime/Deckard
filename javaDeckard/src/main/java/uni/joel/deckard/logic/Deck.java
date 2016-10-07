@@ -6,10 +6,9 @@ import java.util.HashMap;
 import java.util.Random;
 
 /**
- * Deck-class with methods for modifying the cards it contains.
- * In the cards hashmap the name of the card is the key and its amount is the
- * value.
- * 
+ * Deck-class with methods for modifying the cards it contains. In the cards
+ * hashmap the name of the card is the key and its amount is the value.
+ *
  * @author Joel
  */
 public class Deck {
@@ -21,20 +20,20 @@ public class Deck {
         cards = new HashMap<>();
         this.name = name;
     }
-    
+
     public String getName() {
         return this.name;
     }
 
     /**
      * Adds the given amount of the given card to the deck.
-     * 
-     * @param card  Lisättävä kortti
+     *
+     * @param card Lisättävä kortti
      * @param amount Lisättävä määrä
-     * 
-     * @see uni.joel.deckard.logic.Battle#useCard(uni.joel.deckard.logic.Player, uni.joel.deckard.logic.cards.Card) 
+     *
+     * @see uni.joel.deckard.logic.Battle#useCard(uni.joel.deckard.logic.Player,
+     * uni.joel.deckard.logic.cards.Card)
      */
-    
     public Card newCard() {
         ArrayList<Card> cardsArray = convertToArray(cards);
         Random random = new Random();
@@ -43,7 +42,7 @@ public class Deck {
         this.removeCardAmount(card, 1);
         return card;
     }
-    
+
     public void addCards(Card card, int amount) {
         if (amount > 0) {
             if (cards.containsKey(card)) {
@@ -79,16 +78,15 @@ public class Deck {
             cards.remove(card);
         }
     }
-    
 
     public void empty() {
         cards = new HashMap<>();
     }
-    
+
     public boolean isEmpty() {
         return cards.isEmpty();
     }
-    
+
     private ArrayList<Card> convertToArray(HashMap<Card, Integer> cardMap) {
         ArrayList<Card> cardsArray = new ArrayList<>();
         for (Card card : cardMap.keySet()) {
@@ -98,5 +96,9 @@ public class Deck {
             }
         }
         return cardsArray;
+    }
+
+    public HashMap<Card, Integer> getCards() {
+        return cards;
     }
 }
