@@ -10,4 +10,5 @@ Päivä | Tunnit | Kuvaus
 30.9.2016 | 3 | Javadoccien lisäys luokille sekä toiminnallisuuden lisäämistä päätavoitteena saada hyökkäyskortin käyttäminen toimimaan
 5.10.2016 | 2 | Lisätty equals-metodi Card-luokalle ja sille huonosti toimiva testi
 6.10.2016 | 3 | Card luokan equals-metodi korjattu, testit toimivat.
+7.10.2016 | 2 | Added tests and a card drawing method to deck.
 ... | ... | ...
