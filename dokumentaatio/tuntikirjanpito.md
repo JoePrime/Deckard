@@ -1,14 +1,14 @@
 ### Tuntikirjanpito
-Päivä | Tunnit | Kuvaus
+Day | Hours | Description
 --------------- | ----- | ------
-8.9.2016 | 3.5 | Gitin käyttöönotto ja opettelu
-9.9.2016 | 3 | Gitin ja tekstieditoinnin opettelua, pelin rungon suunnittelua ja käyttötapausten kirjaamista
-16.9.2016 | 6 | Ohjelman rungon rakentamista ja raporttien tekoa.
-24.9.2016 | 4 | Pakettien nimien muuttamista, jokusen testin lisääminen ja graafisen käyttöliittymän aloittaminen.
-25.9.2016 | 3 | Koodikatselmointi
-26.9.2016 | 2 | Login-ikkunan luonti ja muuta muokkaamista
-30.9.2016 | 3 | Javadoccien lisäys luokille sekä toiminnallisuuden lisäämistä päätavoitteena saada hyökkäyskortin käyttäminen toimimaan
-5.10.2016 | 2 | Lisätty equals-metodi Card-luokalle ja sille huonosti toimiva testi
-6.10.2016 | 3 | Card luokan equals-metodi korjattu, testit toimivat.
-7.10.2016 | 2 | Added tests and a card drawing method to deck.
+8.9.2016 | 3.5 | Learning to use Git and getting it to work.
+9.9.2016 | 3 | Learning to use Git and a text editor, designing the core of the game ja writing down usage cases.
+16.9.2016 | 6 | Building the core of the program and making reports.
+24.9.2016 | 4 | Changing names of packages, adding some test ja starting the graphical UI.
+25.9.2016 | 3 | Code review
+26.9.2016 | 2 | Creating a login window and other modifications.
+30.9.2016 | 3 | Adding javadocs to classes and adding functionality with the aim to make Attack Cards usable.
+5.10.2016 | 2 | Added equals-method and a poorly working test for it to Card class.
+6.10.2016 | 3 | Fixed the equals-method in Card class, tests are working.
+7.10.2016 | 5 | Added tests and a card drawing method to deck. Added lots of javadoc and test. Fixed lots of javadoc errors. Translated stuff to english.
 ... | ... | ...
