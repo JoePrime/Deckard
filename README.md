@@ -1,5 +1,5 @@
 # Deckard
-Kahden pelaajan vuoropohjainen pakanrakennuskorttipeli jonka ideana on sisältää hyvin monenlaisia kortteja, sekä hauskaa pelaamista.
+A turn-based deck building card game for two players. The idea is to have a wide variety of cards and fun gameplay.
 
 ###Dokumentaatio
 [Aiheen kuvaus](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)  
@@ -8,6 +8,6 @@ Kahden pelaajan vuoropohjainen pakanrakennuskorttipeli jonka ideana on sisältä
 [pit-raportti](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/pit-reports/201610080012/index.html)  
 
 
-TO-DO: Add card drawing method and tests to Player.  
-Add functionality to more cards.  
-Start the Battle UI.
+TO-DO:  
+Start the battle UI and expand it.  
+Add more cards and functionality to them.
