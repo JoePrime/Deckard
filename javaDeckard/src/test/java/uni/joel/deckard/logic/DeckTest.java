@@ -10,6 +10,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import uni.joel.deckard.logic.cards.AttackCard;
+import uni.joel.deckard.logic.cards.TestCard;
 
 /**
  * Tests the Deck class.
@@ -18,11 +19,13 @@ public class DeckTest {
 
     private Deck deck;
     private Card card;
+    private Card card2;
 
     @Before
     public void createDeck() {
         this.deck = new Deck("deck");
-        this.card = new AttackCard("test card", 0, "For testing decks");
+        this.card = new AttackCard("test card", 0, "For testing decks.");
+        this.card2 = new TestCard("Also a test card", 5, "Also for testing purposes.");
     }
     
     @Test
@@ -90,6 +93,20 @@ public class DeckTest {
     
     @Test
     public void emptyingTheDeckWorks() {
-         
+         deck.addCards(card, 6);
+         deck.empty();
+         assertTrue(deck.isEmpty());
+    }
+    
+    @Test
+    public void drawingNewCardWorks() {
+        deck.addCards(card, 5);
+        deck.addCards(card2, 3);
+        Card newCard = deck.newCard();
+        if (newCard.equals(card)) {
+            assertThat(deck.amountOfCard(card), is(4));
+        } else {
+            assertThat(deck.amountOfCard(card2), is(2));
+        }
     }
 }

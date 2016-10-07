@@ -1,6 +1,7 @@
 package uni.joel.deckard.logic;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import uni.joel.deckard.logic.cards.Card;
 
 /**
@@ -10,44 +11,53 @@ import uni.joel.deckard.logic.cards.Card;
  * @author Joel
  */
 
-// This Class is unused for now and has been replaced with an arraylist in the
-// class Player.
 public class Hand {
 
-    public ArrayList<Card> cards;
+    public HashMap<Card, Integer> cards;
     public int currentSize = 0;
 
     public Hand() {
-        cards = new ArrayList();
+        cards = new HashMap<Card, Integer>();
     }
 
     public void addCard(Card card) {
-        cards.add(card);
-    }
-
-    public boolean removeCard(Card card) {
-        if (cards.contains(card)) {
-            return cards.remove(card);
+        if (cards.containsKey(card)) {
+            int amount = cards.get(card);
+            cards.replace(card, amount, amount + 1);
         } else {
-            System.out.println("Can't remove card from deck that is not in the"
-                    + "deck");
-            return false;
+            cards.put(card, 1);
         }
     }
 
-    public boolean contains(Card card) {
-        if (cards.contains(card)) {
-            return true;
+    public void removeAmountOfCard(Card card, int removeAmount) {
+        if (cards.containsKey(card) && removeAmount > 0) {
+            int amount = cards.get(card);
+            if (amount > removeAmount) {
+                cards.replace(card, amount - removeAmount);
+            } else {
+                cards.remove(card);
+            }
         }
-        return false;
+    }
+
+    public void removeCard(Card card) {
+        removeAmountOfCard(card, 1);
     }
     
-    public ArrayList<Card> getCards() {
+    public int amountOfCard(Card card) {
+        if (cards.containsKey(card)) {
+            return cards.get(card);
+        }
+        return 0;
+    }
+    
+    public HashMap<Card, Integer> getCards() {
         return cards;
     }
 
-    public void setCards(ArrayList<Card> cards) {
+    public void setCards(HashMap<Card, Integer> cards) {
         this.cards = cards;
     }
 
+    
 }

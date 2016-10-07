@@ -28,8 +28,9 @@ public class Player {
 
     // Must add card comparator!!
     public boolean useCard(Card card) {
-        if (hand.contains(card)) {
+        if (hand.amountOfCard(card) > 0) {
             card.invoke(this);
+            hand.removeCard(card);
             return true;
         }
         return false;
