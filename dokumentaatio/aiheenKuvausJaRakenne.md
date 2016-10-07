@@ -1,24 +1,20 @@
-**Aihe:** A card game based on deckbuilding
+**Subject:** A card game based on deckbuilding.  
 A two-player card game where the players draw cards from their decks, and using
-those cards try to reduce their opponent's life points to zero. The empahsis
-should be on the variety of different cards. Should include a graphical
-interface, and possible later add-ons are a CPU player and a semi-automatic
-card-balancing system.
+those cards try to reduce their opponent's life points to zero. The emphasis
+should be on the variety of different cards.  
+Will include a graphical interface.  
+Possible later add-on is customizable and saveable decks.
+Even later it might be possible to add a simple AI player and a semi-automatic card cost balancing system.
 
-A differentiator from other card games might be that both players can see each
-other's cards in their hands.
+**Users:** Two players.
 
-**Käyttäjät:** Kaksi tai yksi pelaajaa
+**Actions for all users:**
 
-**Kaikkien käyttäjien toiminnot:**
-
-- Pakan rakentaminen
-  - Sisältää korttien valitsemisen
-  - Sisältää pakan tallentamisen
-
-- Uuden pelin aloittaminen
-
-- Kortin pelaaminen
-  - Vaatii että pelaajalla on riittävästi manaa
-
-- Pelin lopettaminen
+- Inputting your name
+- Starting a game
+- Drawing a card
+  - Assumes that it's the player's turn.
+- Using a card
+  - Assumes that the player has enough mana to use the card.
+  - Assumes that it's the player's turn.
+- Quitting a game
