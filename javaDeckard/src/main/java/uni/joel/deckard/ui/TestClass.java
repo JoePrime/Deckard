@@ -1,4 +1,3 @@
-
 package uni.joel.deckard.ui;
 
 import java.awt.Container;
@@ -8,13 +7,16 @@ import javax.swing.WindowConstants;
 
 /**
  * A test class for testing stuff.
- * 
+ *
  * @author Joel
  */
 public class TestClass implements Runnable {
 
     private JFrame frame;
 
+    /**
+     * Constructor for TestClass.
+     */
     public TestClass() {
     }
 
@@ -25,13 +27,13 @@ public class TestClass implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        luoKomponentit(frame.getContentPane());
+        createComponents(frame.getContentPane());
 
         frame.pack();
         frame.setVisible(true);
     }
 
-    private void luoKomponentit(Container container) {
+    private void createComponents(Container container) {
     }
 
     public JFrame getFrame() {

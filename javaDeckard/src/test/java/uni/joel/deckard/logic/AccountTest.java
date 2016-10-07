@@ -1,4 +1,3 @@
-
 package uni.joel.deckard.logic;
 
 import static org.hamcrest.CoreMatchers.*;
@@ -12,13 +11,13 @@ import static org.junit.Assert.*;
 
 /**
  * Tests the Account class.
- * 
+ *
  * @author Joel
  */
 public class AccountTest {
-    
+
     private Account account;
-    
+
     @Before
     public void createAccount() {
         account = new Account("testAccount");
@@ -29,6 +28,7 @@ public class AccountTest {
         assertThat(account.getName(), is("testAccount"));
         assertTrue(account.getDecks().isEmpty());
     }
+
     @Test
     public void addingDeckWorks() {
         Deck deck = new Deck("testDeck");

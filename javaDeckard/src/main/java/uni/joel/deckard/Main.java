@@ -16,6 +16,10 @@ import uni.joel.deckard.ui.*;
  */
 public class Main {
 
+    /**
+     * The main method for Main.
+     * @param args 
+     */
     public static void main(String[] args) {
 
         Hand hand = new Hand();

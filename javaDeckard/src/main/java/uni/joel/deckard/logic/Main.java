@@ -8,6 +8,10 @@ import java.util.*;
  */
 public class Main {
 
+    /**
+     * The main method for Main.
+     * @param args 
+     */
     public static void main(String[] args) {
         
         Game newGame = new Game();

@@ -1,5 +1,6 @@
 package uni.joel.deckard.logic.cards;
 
+import java.util.Objects;
 import uni.joel.deckard.logic.Player;
 
 /**
@@ -14,12 +15,24 @@ public abstract class Card {
     int mana;
     String desc;
 
+    /**
+     * Constructor for the card.
+     * @param name The name of the card.
+     * @param mana The mana value (cost) of the card.
+     * @param desc The description of what the card does.
+     */
     public Card(String name, int mana, String desc) {
         this.name = name;
         this.mana = mana;
         this.desc = desc;
     }
 
+    /**
+     * The method that activates the card's effect. Execution of the method
+     * depends on the card.
+     *
+     * @param player The player that invokes the card.
+     */
     public void invoke(Player player) {
 
     }
@@ -27,14 +40,11 @@ public abstract class Card {
     @Override
     public boolean equals(Object obj) {
         Card card = (Card) obj;
-        if (this.getClass() == card.getClass()) {
-            if (card.getName().equals(this.name)) {
-                if (card.getMana() == this.mana) {
-                    if (card.getDesc().equals(this.desc)) {
-                        return true;
-                    }
-                }
-            }
+        if (this.getClass() == card.getClass()
+                && card.getName().equals(this.name)
+                && card.getMana() == this.mana
+                && card.getDesc().equals(this.desc)) {
+            return true;
         }
         return false;
     }

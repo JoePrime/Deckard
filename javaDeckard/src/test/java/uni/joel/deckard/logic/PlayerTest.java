@@ -82,18 +82,29 @@ public class PlayerTest {
         matti.addToDeck(card2);
         assertTrue(matti.getDeck().getCards().containsKey(card2));
     }
-    
+
     @Test
-    public void changingHitpointsWorksCorrectly() {
-        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints));
+    public void changingHitpointsByWorksCorrectly() {
+        assertThat(matti.getHitpoints(), is(Player.DEFAULTHITPOINTS));
         matti.changeHitpointsBy(10);
-        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints));
+        assertThat(matti.getHitpoints(), is(Player.DEFAULTHITPOINTS + 10));
         matti.changeHitpointsBy(0);
-        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints + 10));
+        assertThat(matti.getHitpoints(), is(Player.DEFAULTHITPOINTS + 10));
         matti.changeHitpointsBy(-20);
-        assertThat(matti.getHitpoints(), is(Player.defaultHitpoints + 10));
+        assertThat(matti.getHitpoints(), is(Player.DEFAULTHITPOINTS - 10));
         matti.changeHitpointsBy(120);
-        assertThat(matti.getHitpoints(), is(Player.maxHitpoints));
-        
+        assertThat(matti.getHitpoints(), is(Player.MAXHITPOINTS));
+        matti.changeHitpointsBy(-200);
+        assertThat(matti.getHitpoints(), is(0));
+    }
+
+    @Test
+    public void changingHitpointsToWorksCorrectly() {
+        matti.changeHitpointsTo(-50);
+        assertThat(matti.getHitpoints(), is(Player.DEFAULTHITPOINTS));
+        matti.changeHitpointsTo(200);
+        assertThat(matti.getHitpoints(), is(Player.DEFAULTHITPOINTS));
+        matti.changeHitpointsTo(77);
+        assertThat(matti.getHitpoints(), is(77));
     }
 }

@@ -1,16 +1,19 @@
-#Fri Sep 30 23:57:59 EEST 2016
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\ui\\TestClass.java=1475264199555
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Main.java=1475264199802
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Deck.java=1475264199831
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\Main.java=1475264199720
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\DefenseCard.java=1475264199900
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\ui\\Main.java=1475264199611
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Account.java=1475264199508
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\Card.java=1475269020967
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Hand.java=1475269020952
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Battle.java=1475264199694
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\AttackCard.java=1475269020982
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Player.java=1475269072405
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\BypassAttackCard.java=1475143139705
-C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\GainHealthCard.java=1475264199671
-configuration*?=A1671ADE34712D90C09EFDD13FD850183E01FAF9
+#Sat Oct 08 01:30:45 EEST 2016
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\ui\\Login.java=1475879428183
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\ui\\Main.java=1475879428236
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\DefenseCard.java=1475879428250
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\TestCard.java=1475879428280
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\Main.java=1475877263896
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Main.java=1475877895260
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\GainHealthCard.java=1475879428265
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Game.java=1475877895319
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\AttackCard.java=1475878315122
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Deck.java=1475877895297
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\BypassAttackCard.java=1475879428220
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Account.java=1475877263949
+configuration*?=7BE81A2AB0C2F144D2D0BA0A933A20EB9F7425A2
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\cards\\Card.java=1475878796877
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Player.java=1475878095496
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Battle.java=1475877895355
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\logic\\Hand.java=1475877895338
+C\:\\Users\\Joel\\Documents\\GitHub\\Deckard\\javaDeckard\\src\\main\\java\\uni\\joel\\deckard\\ui\\TestClass.java=1475879274830

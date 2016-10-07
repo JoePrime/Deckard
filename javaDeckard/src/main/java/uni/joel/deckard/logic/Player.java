@@ -14,22 +14,38 @@ public class Player {
     String name = "";
     Deck deck;
     Hand hand;
-    int hitpoints = 50;
+    public static final int DEFAULTHITPOINTS = 50;
+    public static final int MAXHITPOINTS = 100;
+    int hitpoints = DEFAULTHITPOINTS;
     int armor = 25;
     int mana = 10;
     int manaProduction = 3;
     Player opponent;
 
+    /**
+     * Constructor for Player. Creates a new deck for the player called "game
+     * deck" and gives the player a new hand.
+     * @param name The name that the player gets.
+     */
     public Player(String name) {
         this.name = name;
         deck = new Deck("game deck");
         hand = new Hand();
     }
 
+    /**
+     * Draws a new random card from the deck.
+     */
     public void drawCard() {
         hand.addCard(deck.newCard());
     }
-    
+
+    /**
+     * Uses the specified card. Effects depend on the card.
+     *
+     * @param card The card to be used.
+     * @return True if the card was used successfully, otherwise false.
+     */
     public boolean useCard(Card card) {
         if (hand.amountOfCard(card) > 0) {
             card.invoke(this);
@@ -38,11 +54,21 @@ public class Player {
         }
         return false;
     }
-    
+
+    /**
+     * Adds the given card to hand.
+     *
+     * @param card The card to be added to hand.
+     */
     public void addToHand(Card card) {
         hand.addCard(card);
     }
-    
+
+    /**
+     * Adds the given card to deck.
+     *
+     * @param card The card to be added to deck.
+     */
     public void addToDeck(Card card) {
         deck.addCards(card, 1);
     }
@@ -80,18 +106,33 @@ public class Player {
         return hitpoints;
     }
 
-    public void setHitpoints(int hitpoints) {
-        this.hitpoints = hitpoints;
+    /**
+     * Changes hitpoints to given amount. Does nothing if amount is not between
+     * 0 and Player.maxHitpoints.
+     *
+     * @param hitpoints The new value to be given to the player's hitpoints.
+     */
+    public void changeHitpointsTo(int hitpoints) {
+        if (hitpoints >= 0 && hitpoints <= MAXHITPOINTS) {
+            this.hitpoints = hitpoints;
+        }
     }
-    
-    public int raiseHitpoints(int amount) {
-        hitpoints = Math.min(hitpoints + amount, 100);
-        return hitpoints;
-    }
-    
-    public int lowerHitpoints(int amount) {
-        hitpoints = Math.max(hitpoints - amount, 0);
-        return hitpoints;
+
+    /**
+     * Changes hitpoints by the given amount. Amount can be positive or
+     * negative. Hitpoints will be lowered if amount is negative and vice versa.
+     * If hitpoints are tried to lower or raise too much, instead changes them
+     * to 0 or Player.maxHitpoints, respectively.
+     *
+     * @param amount The amount that the player's hitpoints should be changed
+     * by.
+     */
+    public void changeHitpointsBy(int amount) {
+        if (amount < 0) {
+            hitpoints = Math.max(0, hitpoints + amount);
+        } else {
+            hitpoints = Math.min(MAXHITPOINTS, hitpoints + amount);
+        }
     }
 
     public int getArmor() {
@@ -117,11 +158,11 @@ public class Player {
     public void setManaProduction(int manaProduction) {
         this.manaProduction = manaProduction;
     }
-    
+
     public Player getOpponent() {
         return this.opponent;
     }
-    
+
     public void setOpponent(Player newOpponent) {
         this.opponent = newOpponent;
     }

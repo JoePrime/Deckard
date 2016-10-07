@@ -5,17 +5,23 @@ import javax.swing.SwingUtilities;
 
 /**
  * The game class. Contains the player(s).
- * 
+ *
  * @author Joel
  */
 public class Game {
 
     private Player player1;
 
-    public void Game() {
-
+    /**
+     * Constructor for Game.
+     */
+    public Game() {
+        
     }
 
+    /**
+     * Creates a new login window and invokes it.
+     */
     public void newGame() {
         Login loginscreen = new Login(this);
         SwingUtilities.invokeLater(loginscreen);
@@ -24,8 +30,8 @@ public class Game {
     public void setPlayer1(Player player1) {
         this.player1 = player1;
     }
-    
-        public Player getPlayer1() {
+
+    public Player getPlayer1() {
         return player1;
     }
 }

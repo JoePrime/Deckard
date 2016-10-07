@@ -104,9 +104,9 @@ public class DeckTest {
         deck.addCards(card2, 3);
         Card newCard = deck.newCard();
         if (newCard.equals(card)) {
-            assertThat(deck.amountOfCard(card), is(4));
+            assertTrue(newCard.equals(card));
         } else {
-            assertThat(deck.amountOfCard(card2), is(2));
+            assertTrue(newCard.equals(card2));
         }
     }
 }

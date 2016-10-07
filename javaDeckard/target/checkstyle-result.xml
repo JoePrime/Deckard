@@ -14,12 +14,11 @@
 </file>
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\GainHealthCard.java">
 </file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\TestCard.java">
+</file>
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Deck.java">
 </file>
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Game.java">
-<error line="15" column="17" severity="error" message="Method Name &apos;Game&apos; must not equal the enclosing class name." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
-<error line="15" column="17" severity="error" message="Name &apos;Game&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
-<error line="28" severity="error" message="&apos;method def modifier&apos; have incorrect indentation level 8, expected level should be 4." source="com.puppycrawl.tools.checkstyle.checks.indentation.IndentationCheck"/>
 </file>
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Hand.java">
 </file>
@@ -30,7 +29,6 @@
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\Main.java">
 </file>
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\ui\Login.java">
-<error line="55" column="28" severity="error" message="Name &apos;NameField&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MemberNameCheck"/>
 </file>
 <file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\ui\Main.java">
 </file>
