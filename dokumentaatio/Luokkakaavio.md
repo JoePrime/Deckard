@@ -1,4 +1,4 @@
-![Linkki](http://yuml.me/0ff21eee)
+![Linkki](http://yuml.me/da47c427)
 
 [Peli]++-2[Pelaaja]
 [Pakka]*-[Kortti]
