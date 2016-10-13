@@ -18,23 +18,13 @@ public class Main {
 
     /**
      * The main method for Main.
-     * @param args 
+     *
+     * @param args
      */
     public static void main(String[] args) {
 
-        Hand hand = new Hand();
-        TestCard card1 = new TestCard("A test card", 5, "For testing purposes.");
-        TestCard card2 = new TestCard("Another test card", 5, "Also for testing purposes.");
+        Game game = new Game();
+        game.newGame();
 
-        hand.addCard(card1);
-        hand.addCard(card2);
-        hand.addCard(card2);
-
-        System.out.println(hand.amountOfCard(card1));
-        System.out.println(hand.amountOfCard(card2));
     }
-
-//      
-//        Game game = new Game();
-//        game.newGame();
 }

@@ -10,8 +10,6 @@ import javax.swing.SwingUtilities;
  */
 public class Game {
 
-    private Player player1;
-
     /**
      * Constructor for Game.
      */
@@ -27,11 +25,4 @@ public class Game {
         SwingUtilities.invokeLater(loginscreen);
     }
 
-    public void setPlayer1(Player player1) {
-        this.player1 = player1;
-    }
-
-    public Player getPlayer1() {
-        return player1;
-    }
 }

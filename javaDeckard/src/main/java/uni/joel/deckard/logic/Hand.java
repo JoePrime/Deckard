@@ -39,7 +39,7 @@ public class Hand {
     /**
      * Removes the specified amount of the given card from the hand, or as much
      * as possible if the amount to be removed is larger than the amount of card
-     * in the deck.
+     * in the hand.
      *
      * @param card The card to be removed.
      * @param removeAmount The amount to be removed.
@@ -56,8 +56,8 @@ public class Hand {
     }
 
     /**
-     * Removes one of the given card from the deck. Does nothing if no amount of
-     * given card is in the deck.
+     * Removes one of the given card from the hand. Does nothing if no amount of
+     * given card is in the hand.
      *
      * @param card The card, one of which should be removed.
      */
@@ -66,7 +66,7 @@ public class Hand {
     }
 
     /**
-     * Returns the amount of the given card in the deck.
+     * Returns the amount of the given card in the hand.
      *
      * @param card The card of which amount is being asked.
      * @return The amount of the card in the hand.
