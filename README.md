@@ -9,5 +9,6 @@ A turn-based deck building card game for two players. The idea is to have a wide
 
 
 TO-DO:  
+Deadline 5:n sekvenssikaaviot
 Start the battle UI and expand it.  
 Add more cards and functionality to them.
