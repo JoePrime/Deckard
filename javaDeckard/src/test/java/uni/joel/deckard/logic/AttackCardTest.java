@@ -25,7 +25,7 @@ public class AttackCardTest {
     public void newCardCreatedCorrectly() {
         assertEquals("Warrior", card.getName());
         assertEquals(5, card.getMana());
-        assertEquals("Strikes the enemy.", card.getDesc());
+        assertEquals("Strikes the enemy.", card.getDescription());
     }
 
     @Test

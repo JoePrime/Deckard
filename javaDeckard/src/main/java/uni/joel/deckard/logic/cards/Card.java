@@ -13,7 +13,7 @@ public abstract class Card {
 
     String name;
     int mana;
-    String desc;
+    String description;
 
     /**
      * Constructor for the card.
@@ -24,7 +24,7 @@ public abstract class Card {
     public Card(String name, int mana, String desc) {
         this.name = name;
         this.mana = mana;
-        this.desc = desc;
+        this.description = desc;
     }
 
     /**
@@ -43,7 +43,7 @@ public abstract class Card {
         if (this.getClass() == card.getClass()
                 && card.getName().equals(this.name)
                 && card.getMana() == this.mana
-                && card.getDesc().equals(this.desc)) {
+                && card.getDescription().equals(this.description)) {
             return true;
         }
         return false;
@@ -65,12 +65,12 @@ public abstract class Card {
         this.mana = mana;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }
