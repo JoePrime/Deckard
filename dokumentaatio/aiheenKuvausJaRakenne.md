@@ -19,4 +19,4 @@ Even later it might be possible to add a simple AI player and a semi-automatic c
   - Assumes that it's the player's turn.
 - Quitting a game
 
-![Linkki](http://yuml.me/0ff21eee)
+![Linkki](http://yuml.me/da47c427)
