@@ -18,3 +18,5 @@ Even later it might be possible to add a simple AI player and a semi-automatic c
   - Assumes that the player has enough mana to use the card.
   - Assumes that it's the player's turn.
 - Quitting a game
+
+https://camo.githubusercontent.com/cfa8d24bf94a7b30c3248d6214a1b566cfc8d8e4/687474703a2f2f79756d6c2e6d652f3066663231656565
