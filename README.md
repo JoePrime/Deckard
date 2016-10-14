@@ -9,6 +9,7 @@ A turn-based deck building card game for two players. The idea is to have a wide
 
 
 TO-DO:  
+Write the Login screen using GridLayout, GridBaglayout is too complicated.  
 Deadline 5:n sekvenssikaaviot  
-Start the battle UI and expand it.  
+Start the battle UI and expand it. (use GridLayout!)  
 Add more cards and functionality to them.
