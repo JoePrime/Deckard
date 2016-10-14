@@ -20,3 +20,6 @@ Even later it might be possible to add a simple AI player and a semi-automatic c
 - Quitting a game
 
 ![Linkki](http://yuml.me/da47c427)
+
+Sekvenssikaavio, käyttötapauksena pelaajien nimien syöttäminen ja uuden taistelun aloittaminen
+![Linkki](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=TWFpbi0-KmdhbWU6CgAHBgAHBSBuZXdHYW1lV2luZG93KCkKZ2FtZS0-KkxvZ2luc2NyZWVuOgANB1N3aW5nVXRpbGl0aWVzOiBpbnZva2VMYXRlcigAJAspCgAbDi0-bABBCyBydW4oKQoACAstPipKRnIAgQQIIAAGBigiAHwFIgAbDwA9DWNyZWF0ZUNvbXBvbmVudHMoKgBJDwBPCHNldFZpc2libGUodHJ1ZSkKVXNlci0tPm5hbWVGaWVsZDE6IG5hbWUxAAgRMgATBjIKACEKLQCBQQ8AMwYAKAoADBQyAIFhD3BsYXllcjE6AAIVMgAHEGJhdHRsAIIXB0IABwUoADoHLCAALAcp&s=default)
