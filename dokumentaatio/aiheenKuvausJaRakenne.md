@@ -6,6 +6,13 @@ Will include a graphical interface.
 Should also have customizable and saveable decks, but might not have enough time for that during javalabra, so at first everyone uses the same deck.
 Even later it might be possible to add a simple AI player and a semi-automatic card cost balancing system.
 
+**Structural Description**
+The project has the class Game as its structural centerpiece. From game the LoginView object is called, which lets the players enter their names, creating new Player objects with these names. The players are then taken to the battle screen, which shows the players' cards and decks, health, armor, mana, manaproduction, turn number and skip turn button. A player can have 0-10 cards in their hands, 5 being the starting amount.
+
+From here the players can choose the card they want to use next or skip their turn. Players' amount of cards in their hands can vary. Planned uses for the cards are reducing the opponent's health, armor or resources, or increasing your own ones. The different card classes all implement the Card superclass and its methods.
+
+In the future the login screen will only ask for one players' name and take them to the main menu instead. From there the player can create, modify, delete and save customized decks and enter the battle with another player.
+
 **Users:** Two players.
 
 **Actions for all users:**
