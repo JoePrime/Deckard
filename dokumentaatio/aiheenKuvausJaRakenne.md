@@ -52,3 +52,6 @@ nameField2-->loginscreen: name2
 loginscreen->*player1:
 loginscreen->*player2:
 loginscreen->*battle: new Battle(player1, player2)
+
+Using an attack card with one in hand while in battle.
+![Linkki](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=TWFpbi0-cGxheWVyMTogdXNlQ2FyZChhdHRhY2tDYXJkKQoAFgcAHQkuaGFuZDogYW1vdW50b2YAGBgAIgUtAFELMQBACgBVCjogaW52b2tlKAB8BykKAHEKAIENC2dldE9wcG9uZW50KACBCAoAOw5vABoHAC4ULgAVCDogY2hhbmdlSGl0cG9pbnRzQnkoLURBTUFHRSkK&s=default)
