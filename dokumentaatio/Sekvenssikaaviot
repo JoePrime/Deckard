@@ -1,0 +1,16 @@
+Main->*game:
+Main->game: newGameWindow()
+game->*Loginscreen:
+game->SwingUtilities: invokeLater(Loginscreen)
+SwingUtilities->loginscreen: run()
+loginscreen->*JFrame: new JFrame("Login")
+loginscreen->*nameField1: createComponents(*)
+loginscreen->*nameField2: createComponents(*)
+loginscreen->JFrame: setVisible(true)
+User-->nameField1: name1
+User-->nameField2: name2
+nameField1-->loginscreen: name1
+nameField2-->loginscreen: name2
+loginscreen->*player1:
+loginscreen->*player2:
+loginscreen->*battle: new Battle(player1, player2)
