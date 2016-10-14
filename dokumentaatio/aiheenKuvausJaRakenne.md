@@ -24,4 +24,21 @@ Even later it might be possible to add a simple AI player and a semi-automatic c
 **Sequence diagrams:**
 
 Choosing the players' names and starting a new battle.
-![Linkki](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=TWFpbi0-KmdhbWU6CgAHBgAHBSBuZXdHYW1lV2luZG93KCkKZ2FtZS0-KkxvZ2luc2NyZWVuOgANB1N3aW5nVXRpbGl0aWVzOiBpbnZva2VMYXRlcigAJAspCgAbDi0-bABBCyBydW4oKQoACAstPipKRnIAgQQIIAAGBigiAHwFIgAbDwA9DWNyZWF0ZUNvbXBvbmVudHMoKgBJDwBPCHNldFZpc2libGUodHJ1ZSkKVXNlci0tPm5hbWVGaWVsZDE6IG5hbWUxAAgRMgATBjIKACEKLQCBQQ8AMwYAKAoADBQyAIFhD3BsYXllcjE6AAIVMgAHEGJhdHRsAIIXB0IABwUoADoHLCAALAcp&s=default)
+![Linkki](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=TWFpbi0-KmdhbWU6CgAHBgAHBSBuZXdHYW1lV2luZG93KCkKZ2FtZS0-KkxvZ2luc2NyZWVuOgANB1N3aW5nVXRpbGl0aWVzOiBpbnZva2VMYXRlcigAJAspCgAbDi0-bABBCyBydW4oKQoACAstPipKRnIAgQQIIAAGBigiAHwFIgAaEG5hbWVGaWVsZDE6IGNyZWF0ZUNvbXBvbmVudHMoKgAVGTIACyMAfQhzZXRWaXNpYmxlKHRydWUpClVzZXItLT4AbwxuYW1lMQAIETIAEwYyCgCBHAotAIFvDwAzBgCBDgoADBQyAIIPD3BsYXllcjE6AAIVMgAHEGJhdHRsAIJFB0IABwUoADoHLCAALAcp&s=default)
+
+Main->*game:
+Main->game: newGameWindow()
+game->*Loginscreen:
+game->SwingUtilities: invokeLater(Loginscreen)
+SwingUtilities->loginscreen: run()
+loginscreen->*JFrame: new JFrame("Login")
+loginscreen->*nameField1: createComponents(*)
+loginscreen->*nameField2: createComponents(*)
+loginscreen->JFrame: setVisible(true)
+User-->nameField1: name1
+User-->nameField2: name2
+nameField1-->loginscreen: name1
+nameField2-->loginscreen: name2
+loginscreen->*player1:
+loginscreen->*player2:
+loginscreen->*battle: new Battle(player1, player2)
