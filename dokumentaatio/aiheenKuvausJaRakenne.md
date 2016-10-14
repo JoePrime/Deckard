@@ -33,7 +33,7 @@ Even later it might be possible to add a simple AI player and a semi-automatic c
 
 **Sequence diagrams:**
 
-Choosing the players' names and starting a new battle.
+Choosing the players' names and starting a new battle. (some parts left out to reduce size)
 ![Linkki](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=TWFpbi0-KmdhbWU6CgAHBgAHBSBuZXdHYW1lV2luZG93KCkKZ2FtZS0-KkxvZ2luc2NyZWVuOgANB1N3aW5nVXRpbGl0aWVzOiBpbnZva2VMYXRlcigAJAspCgAbDi0-bABBCyBydW4oKQoACAstPipKRnIAgQQIIAAGBigiAHwFIgAaEG5hbWVGaWVsZDE6IGNyZWF0ZUNvbXBvbmVudHMoKgAVGTIACyMAfQhzZXRWaXNpYmxlKHRydWUpClVzZXItLT4AbwxuYW1lMQAIETIAEwYyCgCBHAotAIFvDwAzBgCBDgoADBQyAIIPD3BsYXllcjE6AAIVMgAHEGJhdHRsAIJFB0IABwUoADoHLCAALAcp&s=default)
 
 Main->*game:
