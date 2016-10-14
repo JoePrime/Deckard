@@ -92,6 +92,8 @@ public class Login implements Runnable {
         public void actionPerformed(ActionEvent ae) {
             player1 = new Player(nameField1.getText());
             player2 = new Player(nameField2.getText());
+            Battle newBattle = new Battle(player1, player2);
+            BattleView newBattleView = new BattleView(newBattle);
             System.out.println(player1);
             System.out.println(player2);
         }

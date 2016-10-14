@@ -23,17 +23,19 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        Player p1 = new Player("Harri");
-        Player p2 = new Player("Ritva");
-        Battle battle = new Battle(p1, p2);
-        Card newCard = new AttackCard("Sword", 5, "Used to hit the opponent.");
-        p1.addToHand(newCard);
-        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
-        p1.useCard(newCard);
-        System.out.println("Attack card used.");
-        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
-//        Game game = new Game();
-//        game.newGame();
+//        // DEMO/TEST CODE
+//        Player p1 = new Player("Harri");
+//        Player p2 = new Player("Ritva");
+//        Battle battle = new Battle(p1, p2);
+//        Card newCard = new AttackCard("Sword", 5, "Used to hit the opponent.");
+//        p1.addToHand(newCard);
+//        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
+//        p1.useCard(newCard);
+//        System.out.println("Attack card used.");
+//        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
+        
+        Game game = new Game();
+        game.newGame();
 
     }
 }
