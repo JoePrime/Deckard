@@ -3,7 +3,7 @@ A two-player card game where the players draw cards from their decks, and using
 those cards try to reduce their opponent's life points to zero. The emphasis
 should be on the variety of different cards.  
 Will include a graphical interface.  
-Possible later add-on is customizable and saveable decks.
+Should also have customizable and saveable decks, but might not have enough time for that during javalabra, so at first everyone uses the same deck.
 Even later it might be possible to add a simple AI player and a semi-automatic card cost balancing system.
 
 **Users:** Two players.
