@@ -55,3 +55,11 @@ loginscreen->*battle: new Battle(player1, player2)
 
 Using an attack card with one in hand while in battle.
 ![Linkki](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=TWFpbi0-cGxheWVyMTogdXNlQ2FyZChhdHRhY2tDYXJkKQoAFgcAHQkuaGFuZDogYW1vdW50b2YAGBgAIgUtAFELMQBACgBVCjogaW52b2tlKAB8BykKAHEKAIENC2dldE9wcG9uZW50KACBCAoAOw5vABoHAC4ULgAVCDogY2hhbmdlSGl0cG9pbnRzQnkoLURBTUFHRSkK&s=default)
+
+Main->player1: useCard(attackCard)
+player1->player1.hand: amountofCard(attackCard)
+player1.hand-->player1: 1
+player1->attackCard: invoke(player1)
+attackCard->player1: getOpponent()
+player1-->attackCard: opponent
+attackCard->player1.opponent: changeHitpointsBy(-DAMAGE)
