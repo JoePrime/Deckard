@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.event.*;
 import javax.swing.*;
 import uni.joel.deckard.logic.Battle;
@@ -28,6 +29,7 @@ public class Login implements Runnable {
     /**
      * Constructor for login. Creates a new JFrame to put the UI components in.
      * Gets a Game as a parameter to put the new Players in.
+     *
      * @param game The game the login screen belongs to.
      */
     public Login(Game game) {
@@ -38,7 +40,7 @@ public class Login implements Runnable {
     @Override
     public void run() {
         frame = new JFrame("Login");
-        frame.setPreferredSize(new Dimension(800, 500));
+        frame.setPreferredSize(new Dimension(800, 100));
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         createComponents(frame.getContentPane());
@@ -54,25 +56,26 @@ public class Login implements Runnable {
      * @param container
      */
     private void createComponents(Container container) {
-        container.setLayout(new GridBagLayout());
-        GridBagConstraints c = new GridBagConstraints();
-        c.gridheight = 2;
-        c.gridwidth = 3;
-        c.gridx = 0;
-        c.gridy = 0;
-        JLabel text1 = new JLabel("Username for player 1: ");
-        JLabel text2 = new JLabel("Username for player 2: ");
-        container.add(text1, c);
-        c.gridy = 1;
-//        container.add(text2, c);
-//        JTextField usernameField1 = new JTextField();
-//        JTextField usernameField2 = new JTextField();
-//        container.add(usernameField1);
-//        container.add(usernameField2);
-//        JButton submitButton = new JButton("Continue");
-//        LoginButtonListener loginListener = new LoginButtonListener(usernameField1, usernameField2);
-//        submitButton.addActionListener(loginListener);
-//        container.add(submitButton, BorderLayout.EAST);
+        container.setLayout(new GridLayout(1, 2));
+
+        JPanel vasenPaneeli = new JPanel(new GridLayout(2, 2));
+        JLabel text1 = new JLabel("Name for player 1:");
+        text1.setHorizontalAlignment(SwingConstants.CENTER);
+        vasenPaneeli.add(text1);
+        JTextField usernameField1 = new JTextField();
+        vasenPaneeli.add(usernameField1);
+        JLabel text2 = new JLabel("Name for player 2:");
+        text2.setHorizontalAlignment(SwingConstants.CENTER);
+        vasenPaneeli.add(text2);
+        JTextField usernameField2 = new JTextField();
+        vasenPaneeli.add(usernameField2);
+
+        container.add(vasenPaneeli);
+
+        JButton submitButton = new JButton("Start the game!");
+        LoginButtonListener loginListener = new LoginButtonListener(usernameField1, usernameField2);
+        submitButton.addActionListener(loginListener);
+        container.add(submitButton);
     }
 
     public class LoginButtonListener implements ActionListener {
@@ -90,7 +93,7 @@ public class Login implements Runnable {
             player1 = new Player(nameField1.getText());
             player2 = new Player(nameField2.getText());
             System.out.println(player1);
-            System.out.println(player1);
+            System.out.println(player2);
         }
     }
 
