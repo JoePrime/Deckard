@@ -18,7 +18,7 @@ import uni.joel.deckard.logic.Player;
  *
  * @author Joel
  */
-public class Login implements Runnable {
+public class LoginView implements Runnable {
 
     private JFrame frame;
     private Player player1;
@@ -32,7 +32,7 @@ public class Login implements Runnable {
      *
      * @param game The game the login screen belongs to.
      */
-    public Login(Game game) {
+    public LoginView(Game game) {
         frame = new JFrame();
         this.game = game;
     }
@@ -83,6 +83,12 @@ public class Login implements Runnable {
         private JTextField nameField1;
         private JTextField nameField2;
 
+        /**
+         * Creates a new LoginButtonListener and sets the given textfields as
+         * the ones it listens to.
+         * @param nameField1 The first text field.
+         * @param nameField2 The second text field.
+         */
         public LoginButtonListener(JTextField nameField1, JTextField nameField2) {
             this.nameField1 = nameField1;
             this.nameField2 = nameField2;

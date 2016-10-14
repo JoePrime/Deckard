@@ -19,7 +19,7 @@ public class Main {
     /**
      * The main method for Main.
      *
-     * @param args
+     * @param args arguments
      */
     public static void main(String[] args) {
 
@@ -35,7 +35,7 @@ public class Main {
 //        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
         
         Game game = new Game();
-        game.newGame();
+        game.newGameWindow();
 
     }
 }

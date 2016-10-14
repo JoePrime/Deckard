@@ -20,8 +20,8 @@ public class Game {
     /**
      * Creates a new login window and invokes it.
      */
-    public void newGame() {
-        Login loginscreen = new Login(this);
+    public void newGameWindow() {
+        LoginView loginscreen = new LoginView(this);
         SwingUtilities.invokeLater(loginscreen);
     }
 
