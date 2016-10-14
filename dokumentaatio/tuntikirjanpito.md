@@ -12,4 +12,5 @@ Day | Hours | Description
 6.10.2016 | 3 | Fixed the equals-method in Card class, tests are working.
 7.10.2016 | 5 | Added tests and a card drawing method to deck. Added lots of javadoc and test. Fixed lots of javadoc errors. Translated stuff to english.
 13.10.2016 | 4 | Implemented some small changes to the code and the class diagram. Tried to start making the UI with GridBagLayout and failed.
+14.10.2016 | 4 | Started Battle UI, drew sequence diagrams, wrote a structure description and user instructions, created jar-file.
 ... | ... | ...
