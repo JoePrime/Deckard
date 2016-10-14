@@ -5,14 +5,15 @@ uni\joel\deckard\ui\Main.class
 uni\joel\deckard\logic\cards\BypassAttackCard.class
 uni\joel\deckard\logic\Game.class
 uni\joel\deckard\logic\cards\AttackCard.class
-uni\joel\deckard\ui\Login$LoginButtonListener.class
+uni\joel\deckard\ui\LoginView.class
 uni\joel\deckard\logic\cards\GainHealthCard.class
 uni\joel\deckard\logic\cards\Card.class
 uni\joel\deckard\Main.class
 uni\joel\deckard\logic\Account.class
 uni\joel\deckard\logic\Battle.class
+uni\joel\deckard\ui\BattleView.class
 uni\joel\deckard\logic\Player.class
 uni\joel\deckard\logic\Main.class
+uni\joel\deckard\ui\LoginView$LoginButtonListener.class
 uni\joel\deckard\logic\Hand.class
-uni\joel\deckard\ui\Login.class
 uni\joel\deckard\logic\cards\TestCard.class
