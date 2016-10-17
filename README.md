@@ -6,6 +6,7 @@ A turn-based deck building card game for two players. The idea is to have a wide
 [Tuntikirjanpito](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/tuntikirjanpito.md)  
 [checkstyle-raportti](https://htmlpreview.github.io/?https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/checkstyle.html)  
 [pit-raportti](https://htmlpreview.github.io/?https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/pit-reports/index.html)  
+[Käyttöohjeet](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/K%C3%A4ytt%C3%B6ohjeet.md)
 
 
 TO-DO:  
