@@ -13,4 +13,6 @@ Day | Hours | Description
 7.10.2016 | 5 | Added tests and a card drawing method to deck. Added lots of javadoc and test. Fixed lots of javadoc errors. Translated stuff to english.
 13.10.2016 | 4 | Implemented some small changes to the code and the class diagram. Tried to start making the UI with GridBagLayout and failed.
 14.10.2016 | 4 | Started Battle UI, drew sequence diagrams, wrote a structure description and user instructions, created jar-file.
+20.10.2016 | 2 | Started enabling the textual description of cards being written inside JButtons.
+21.10.2016 | 1 | Got the textual description to work, with line breaks, using html.
 ... | ... | ...
