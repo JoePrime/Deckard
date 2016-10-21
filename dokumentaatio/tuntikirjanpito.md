@@ -2,7 +2,7 @@
 Day | Hours | Description
 --------------- | ----- | ------
 8.9.2016 | 3.5 | Learning to use Git and getting it to work.
-9.9.2016 | 3 | Learning to use Git and a text editor, designing the core of the game ja writing down usage cases.
+9.9.2016 | 3 | Learning to use Git and a text editor, designing the core of the game and writing down usage cases.
 16.9.2016 | 6 | Building the core of the program and making reports.
 24.9.2016 | 4 | Changing names of packages, adding some test ja starting the graphical UI.
 25.9.2016 | 3 | Code review
