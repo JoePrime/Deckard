@@ -1,6 +1,7 @@
 package uni.joel.deckard.logic;
 
 import uni.joel.deckard.logic.cards.Card;
+import uni.joel.deckard.ui.BattleView;
 
 /**
  * The main part of the game is the battle screen and actions. Those are
@@ -25,6 +26,8 @@ public class Battle {
         this.p2 = p2;
         p1.setOpponent(p2);
         p2.setOpponent(p1);
+        BattleView battleView = new BattleView(this);
+        battleView.run();
     }
 
     public Player getP1() {

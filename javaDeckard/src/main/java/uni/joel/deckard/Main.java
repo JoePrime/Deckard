@@ -34,8 +34,9 @@ public class Main {
 //        System.out.println("Attack card used.");
 //        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
         
-        Game game = new Game();
-        game.newGameWindow();
+        Player kalle = new Player("Kalle");
+        Player ritva = new Player("Ritva");
+        Battle battle = new Battle(kalle, ritva);
 
     }
 }

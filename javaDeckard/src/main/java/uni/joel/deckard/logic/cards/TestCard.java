@@ -8,6 +8,9 @@ package uni.joel.deckard.logic.cards;
  */
 public class TestCard extends Card {
 
+    String name = "Testikortti";
+    int mana = 5;
+    String description = "This subclass of Card is used for testing the Card class.";
     /**
      * Constructor for TestCard.
      * @param name name
@@ -17,4 +20,5 @@ public class TestCard extends Card {
     public TestCard(String name, int mana, String desc) {
         super(name, mana, desc);
     }
+    
 }

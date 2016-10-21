@@ -13,6 +13,14 @@ public class AttackCard extends Card {
 
     /**
      * Constructor for the AttackCard.
+     */
+     public AttackCard() {
+        super("Sword", 8, "A sword used to strike the opponent.");
+    }
+    
+    /**
+     * An alternative constructor for the AttackCard, in which the values are
+     * given.
      * @param name Name of the card.
      * @param mana Mana value of the card.
      * @param desc Description of the card.
@@ -26,4 +34,14 @@ public class AttackCard extends Card {
         user.getOpponent().changeHitpointsBy(-DAMAGE);
     }
 
+    /**
+     * This method calls the superclass's method to return the description of
+     * the card to be put in the card's
+     * place in the GUI, and adds the amount of damage it does to it.
+     * @return The textual description of the card.
+     */
+    @Override
+    public String toString() {
+        return super.toString() + "<br/>" + "Damage: " + DAMAGE + "</html>";
+    }
 }

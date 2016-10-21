@@ -16,15 +16,16 @@ public abstract class Card {
     String description;
 
     /**
-     * Constructor for the card.
-     * @param name The name of the card.
-     * @param mana The mana value (cost) of the card.
-     * @param desc The description of what the card does.
+     * The constructor for the card.
      */
-    public Card(String name, int mana, String desc) {
+    public Card() {
+        
+    }
+    
+    public Card(String name, int mana, String description) {
         this.name = name;
         this.mana = mana;
-        this.description = desc;
+        this.description = description;
     }
 
     /**
@@ -47,6 +48,17 @@ public abstract class Card {
             return true;
         }
         return false;
+    }
+    
+    /**
+     * This method is used to write the html description for the cards. This
+     * text contains all the info on the card and is shown in the card's slot
+     * in the BattleView part of the graphical user interface.
+     * @return The textual info of the card.
+     */
+    @Override
+    public String toString() {
+        return "<html>Cost: " + this.mana + "<br/>" + this.name.toUpperCase() + "<br/>" + this.description;
     }
 
     public String getName() {

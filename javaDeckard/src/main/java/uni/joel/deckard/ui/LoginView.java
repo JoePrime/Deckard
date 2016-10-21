@@ -33,7 +33,6 @@ public class LoginView implements Runnable {
      * @param game The game the login screen belongs to.
      */
     public LoginView(Game game) {
-        frame = new JFrame();
         this.game = game;
     }
 
@@ -86,6 +85,7 @@ public class LoginView implements Runnable {
         /**
          * Creates a new LoginButtonListener and sets the given textfields as
          * the ones it listens to.
+         *
          * @param nameField1 The first text field.
          * @param nameField2 The second text field.
          */
@@ -98,10 +98,10 @@ public class LoginView implements Runnable {
         public void actionPerformed(ActionEvent ae) {
             player1 = new Player(nameField1.getText());
             player2 = new Player(nameField2.getText());
-            Battle newBattle = new Battle(player1, player2);
-            BattleView newBattleView = new BattleView(newBattle);
             System.out.println(player1);
             System.out.println(player2);
+            frame.dispose();
+            Battle newBattle = new Battle(player1, player2);
         }
     }
 
