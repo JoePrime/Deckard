@@ -1,6 +1,6 @@
-uni\joel\deckard\logic\BattleTest.class
 uni\joel\deckard\logic\DeckTest.class
 uni\joel\deckard\logic\AccountTest.class
 uni\joel\deckard\logic\PlayerTest.class
-uni\joel\deckard\logic\HandTest.class
 uni\joel\deckard\logic\AttackCardTest.class
+uni\joel\deckard\logic\BattleTest.class
+uni\joel\deckard\logic\HandTest.class

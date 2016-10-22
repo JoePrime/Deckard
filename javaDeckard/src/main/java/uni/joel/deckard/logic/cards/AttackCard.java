@@ -29,9 +29,22 @@ public class AttackCard extends Card {
         super(name, mana, desc);
     }
 
+    /**
+     * AttackCard's invoke-method reduces the opponent's health by the DAMAGE
+     * amount or, if the opponent doesn't have enough health, reduces the rest
+     * from the opponent's hitpoints.
+     * @param user The Player using the card.
+     */
     @Override
     public void invoke(Player user) {
-        user.getOpponent().changeHitpointsBy(-DAMAGE);
+        int opponentArmor = user.getOpponent().getArmor();
+        if (opponentArmor >= DAMAGE) {
+            user.getOpponent().changeArmorBy(-DAMAGE);
+        } else {
+            int overFlow = DAMAGE - opponentArmor;
+            user.getOpponent().setArmor(0);
+            user.getOpponent().changeHitpointsBy(-overFlow);
+        }
     }
 
     /**

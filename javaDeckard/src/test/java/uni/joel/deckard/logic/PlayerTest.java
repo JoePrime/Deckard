@@ -107,4 +107,17 @@ public class PlayerTest {
         matti.changeHitpointsTo(77);
         assertThat(matti.getHitpoints(), is(77));
     }
+    
+    @Test
+    public void changingArmorByWorksCorrectly() {
+        assertThat(matti.getArmor(), is(Player.DEFAULTARMOR));
+        matti.changeArmorBy(-10);
+        assertThat(matti.getArmor(), is(Player.DEFAULTARMOR - 10));
+        matti.changeArmorBy(15);
+        assertThat(matti.getArmor(), is(Player.DEFAULTARMOR + 5));
+        matti.changeArmorBy(100);
+        assertThat(matti.getArmor(), is(Player.MAXARMOR));
+        matti.changeArmorBy(-100);
+        assertThat(matti.getArmor(), is(0));
+    }
 }

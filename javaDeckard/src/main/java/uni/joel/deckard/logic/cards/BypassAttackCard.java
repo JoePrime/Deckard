@@ -2,6 +2,7 @@ package uni.joel.deckard.logic.cards;
 
 public class BypassAttackCard extends Card {
 
+    public final int DAMAGE = 9;
     /**
      * Constructor for BypassAttackCard.
      * @param name name

@@ -15,7 +15,9 @@ public class Player {
     Deck deck;
     Hand hand;
     public static final int DEFAULTHITPOINTS = 50;
+    public static final int DEFAULTARMOR = 25;
     public static final int MAXHITPOINTS = 100;
+    public static final int MAXARMOR = 50;
     int hitpoints = DEFAULTHITPOINTS;
     int armor = 25;
     int mana = 10;
@@ -137,6 +139,21 @@ public class Player {
             hitpoints = Math.max(0, hitpoints + amount);
         } else {
             hitpoints = Math.min(MAXHITPOINTS, hitpoints + amount);
+        }
+    }
+    
+    /**
+     * Changes armor by the given amount. Amount can be positive or negative.
+     * Armor will be lowered if the amount is negative and vice versa. If armor
+     * is tried to lower or raise too much, instead changes it to 0 or Player.
+     * maxArmor, respectively.
+     * @param amount The int amount the player's armor should be changed by.
+     */
+    public void changeArmorBy(int amount) {
+        if (amount < 0) {
+            armor = Math.max(0, armor + amount);
+        } else {
+            armor = Math.min(MAXARMOR, armor + amount);
         }
     }
 

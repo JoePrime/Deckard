@@ -34,9 +34,16 @@ public class AttackCardTest {
         Player player2 = new Player("player2");
         Battle battle = new Battle(player1, player2);
         player1.addToHand(card);
-        assertEquals(Player.DEFAULTHITPOINTS, player2.getHitpoints());
+        player1.addToHand(card);
+        player1.addToHand(card);
+        assertThat(player2.getArmor(), is(Player.DEFAULTARMOR));
         player1.useCard(card);
-        assertEquals(Player.DEFAULTHITPOINTS - AttackCard.DAMAGE, player2.getHitpoints());
+        assertThat(player2.getArmor(), is(Player.DEFAULTARMOR - AttackCard.DAMAGE));
+        player1.useCard(card);
+        player1.useCard(card);
+        assertThat(player2.getArmor(), is(Math.max(0, Player.DEFAULTARMOR - 3*AttackCard.DAMAGE)));
+        assertThat(player2.getHitpoints(), is(Math.min(Player.DEFAULTHITPOINTS,
+                Player.DEFAULTHITPOINTS - (3*AttackCard.DAMAGE - Player.DEFAULTARMOR))));
     }
 
     // Can't compare different classes? First commented line doesn't work.

@@ -117,6 +117,7 @@ public class BattleView implements Runnable {
         lowerStatusScreen.add(player2Mana);
         lowerStatusScreen.add(player2ManaProduction);
 
+        // Add card buttons for player 1
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
@@ -128,10 +129,12 @@ public class BattleView implements Runnable {
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
         
+        // Add the deck button for player 1
         JButton deckButton1 = new JButton("<html><big>DECK</big></html>");
         deckButton1.addActionListener(new DeckListener(p1));
         upperCardRow.add(deckButton1);
 
+        // Add card buttons for player 2
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
@@ -143,10 +146,12 @@ public class BattleView implements Runnable {
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
         
+        // Add the deck button for player 2
         JButton deckButton2 = new JButton("<html><big>DECK</big></html>");
         deckButton2.addActionListener(new DeckListener(p2));
         lowerCardRow.add(deckButton2);
 
+        // Add all the components to the main container
         container.add(upperStatusScreen);
         container.add(upperCardRow);
         container.add(middleField);
@@ -181,7 +186,7 @@ public class BattleView implements Runnable {
                 cardButton.addActionListener(new CardListener(player, cards.get(i)));
             } else {
                 JButton cardButton = (JButton) lowerCardRow.getComponent(i);
-                cardButton.addActionListener(new CardListener(player, cards.get(i)));
+                cardButton.setText(cards.get(i).toString());
                 cardButton.addActionListener(new CardListener(player, cards.get(i)));
             }
         }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="uni.joel.deckard.logic.AttackCardTest" time="0.308" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="uni.joel.deckard.logic.AttackCardTest" time="0.005" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_65\jre\bin"/>
@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="uni.joel.deckard.logic.AttackCardTest" name="reducesOpponentsHealthCorrectly" time="0.279"/>
+  <testcase classname="uni.joel.deckard.logic.AttackCardTest" name="reducesOpponentsHealthCorrectly" time="0"/>
   <testcase classname="uni.joel.deckard.logic.AttackCardTest" name="newCardCreatedCorrectly" time="0"/>
   <testcase classname="uni.joel.deckard.logic.AttackCardTest" name="equalsWorksCorrectly" time="0"/>
 </testsuite>
