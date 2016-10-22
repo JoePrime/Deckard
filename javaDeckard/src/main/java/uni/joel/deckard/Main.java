@@ -5,6 +5,7 @@ import java.util.Scanner;
 import javax.swing.SwingUtilities;
 import uni.joel.deckard.logic.*;
 import uni.joel.deckard.logic.cards.AttackCard;
+import uni.joel.deckard.logic.cards.BypassAttackCard;
 import uni.joel.deckard.logic.cards.Card;
 import uni.joel.deckard.logic.cards.TestCard;
 import uni.joel.deckard.ui.*;
@@ -35,8 +36,10 @@ public class Main {
 //        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
         Player kalle = new Player("Kalle");
         Player ritva = new Player("Ritva");
-        kalle.getDeck().addCards(new AttackCard(), 10);
-        ritva.getDeck().addCards(new AttackCard(), 10);
+        kalle.getDeck().addCards(new AttackCard(), 5);
+        ritva.getDeck().addCards(new AttackCard(), 5);
+        kalle.getDeck().addCards(new BypassAttackCard(), 5);
+        ritva.getDeck().addCards(new BypassAttackCard(), 5);
         Battle battle = new Battle(kalle, ritva);
         battle.StartBattle();
 

@@ -45,9 +45,7 @@ public class AttackCardTest {
         assertThat(player2.getHitpoints(), is(Math.min(Player.DEFAULTHITPOINTS,
                 Player.DEFAULTHITPOINTS - (3*AttackCard.DAMAGE - Player.DEFAULTARMOR))));
     }
-
-    // Can't compare different classes? First commented line doesn't work.
-    // Neither do the assertEquals or assertThat methods.
+    
     @Test
     public void equalsWorksCorrectly() {
         AttackCard identicalCard = new AttackCard("Warrior", 5, "Strikes the enemy.");

@@ -162,15 +162,15 @@ public class BattleView implements Runnable {
     public void updatePlayerStatus(Player px) {
         if (px == p1) {
             player1Name.setText("Player: " + px.getName());
-            player1Armor.setText("Armor: " + Integer.toString(px.getArmor()));
-            player1HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()));
+            player1Armor.setText("Armor: " + Integer.toString(px.getArmor()) + "/" + Player.MAXARMOR);
+            player1HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()) + "/" + Player.MAXHITPOINTS);
             player1Mana.setText("Mana: " + Integer.toString(px.getMana()));
             player1ManaProduction.setText("Mana production: " + Integer.toString(px.getManaProduction()));
         }
         if (px == p2) {
             player2Name.setText("Player: " + px.getName());
-            player2Armor.setText("Armor: " + Integer.toString(px.getArmor()));
-            player2HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()));
+            player2Armor.setText("Armor: " + Integer.toString(px.getArmor()) + "/" + Player.MAXARMOR);
+            player2HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()) + "/" + Player.MAXHITPOINTS);
             player2Mana.setText("Mana: " + Integer.toString(px.getMana()));
             player2ManaProduction.setText("Mana production: " + Integer.toString(px.getManaProduction()));
         }

@@ -3,7 +3,8 @@ package uni.joel.deckard.logic.cards;
 import uni.joel.deckard.logic.Player;
 
 /**
- * An attacking card that reduces the using player's opponents health.
+ * An attacking card that reduces the opponent's armor, or health if the
+ * opponent doesn't have any armor.
  *
  * @author Joel
  */
