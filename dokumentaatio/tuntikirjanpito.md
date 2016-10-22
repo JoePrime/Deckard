@@ -15,5 +15,5 @@ Day | Hours | Description
 14.10.2016 | 4 | Started Battle UI, drew sequence diagrams, wrote a structure description and user instructions, created jar-file.
 20.10.2016 | 2 | Started enabling the textual description of cards being written inside JButtons.
 21.10.2016 | 1 | Got the textual description to work, with line breaks, using html.
-... | ... | ...
 23.10.2016 | 6 | Added a lot of functionality to the Graphical UI, added a new card.
+... | ... | ...
