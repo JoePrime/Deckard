@@ -13,10 +13,11 @@ public class Battle {
 
     // add turn counter!
     private Player p1, p2;
+    BattleView battleView;
 
     /**
      * Creates a new Battle Object and sets given players p1 and p2 as opponents
-     * to each others.
+     * to each other.
      *
      * @param p1 first player
      * @param p2 second player
@@ -26,8 +27,31 @@ public class Battle {
         this.p2 = p2;
         p1.setOpponent(p2);
         p2.setOpponent(p1);
-        BattleView battleView = new BattleView(this);
+    }
+
+    /**
+     * Starts the battle by creating a new BattleView runnable and running it.
+     */
+    public void StartBattle() {
+        battleView = new BattleView(this);
         battleView.run();
+        giveStartingHand(p1);
+        giveStartingHand(p2);
+        battleView.updateAll();
+    }
+
+    /**
+     * Gives the first five cards to the appointed player's hand at the start of
+     * the game.
+     *
+     * @param player The player the cards will be given to.
+     */
+    public void giveStartingHand(Player player) {
+        if (!player.deck.isEmpty()) {
+            for (int i = 0; i < 5; i++) {
+                player.drawCard();
+            }
+        }
     }
 
     public Player getP1() {

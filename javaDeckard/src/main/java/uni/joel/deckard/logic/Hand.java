@@ -12,14 +12,21 @@ import uni.joel.deckard.logic.cards.Card;
  */
 public class Hand {
 
-    public HashMap<Card, Integer> cards;
-    public int currentSize = 0;
+    /**
+     * The maximum amount of cards a player can have in their hand at once.
+     */
+    public static final int MAXHANDSIZE = 10;
+    
+    /**
+     * The cards in the hand as an ArrayList.
+     */
+    public ArrayList<Card> cards;
 
     /**
-     * Constructor for Hand.
+     * Constructor for Hand. Creates a new empty ArrayList;
      */
     public Hand() {
-        cards = new HashMap<Card, Integer>();
+        cards = new ArrayList<Card>();
     }
 
     /**
@@ -28,31 +35,10 @@ public class Hand {
      * @param card The given card.
      */
     public void addCard(Card card) {
-        if (cards.containsKey(card)) {
-            int amount = cards.get(card);
-            cards.replace(card, amount, amount + 1);
-        } else {
-            cards.put(card, 1);
+        if (cards.size()< MAXHANDSIZE) {
+            cards.add(card);
         }
-    }
-
-    /**
-     * Removes the specified amount of the given card from the hand, or as much
-     * as possible if the amount to be removed is larger than the amount of card
-     * in the hand.
-     *
-     * @param card The card to be removed.
-     * @param removeAmount The amount to be removed.
-     */
-    public void removeAmountOfCard(Card card, int removeAmount) {
-        if (cards.containsKey(card) && removeAmount > 0) {
-            int amount = cards.get(card);
-            if (amount > removeAmount) {
-                cards.replace(card, amount - removeAmount);
-            } else {
-                cards.remove(card);
-            }
-        }
+        
     }
 
     /**
@@ -62,27 +48,25 @@ public class Hand {
      * @param card The card, one of which should be removed.
      */
     public void removeCard(Card card) {
-        removeAmountOfCard(card, 1);
+        if (cards.contains(card)) {
+            cards.remove(card);
+        }
     }
 
     /**
-     * Returns the amount of the given card in the hand.
-     *
-     * @param card The card of which amount is being asked.
-     * @return The amount of the card in the hand.
+     * Tells if there is any of the given card in the hand.
+     * @param card The card being asked about.
+     * @return True if there is at least one of the given card, false otherwise.
      */
-    public int amountOfCard(Card card) {
-        if (cards.containsKey(card)) {
-            return cards.get(card);
-        }
-        return 0;
+    public boolean containsCard(Card card) {
+        return cards.contains(card);
     }
 
-    public HashMap<Card, Integer> getCards() {
+    public ArrayList<Card> getCards() {
         return cards;
     }
 
-    public void setCards(HashMap<Card, Integer> cards) {
+    public void setCards(ArrayList<Card> cards) {
         this.cards = cards;
     }
 

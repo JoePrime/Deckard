@@ -3,6 +3,9 @@ package uni.joel.deckard.ui;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,10 +19,18 @@ import uni.joel.deckard.logic.cards.Card;
 
 public class BattleView implements Runnable {
 
+    //Player 1 = upper cards and values.
+    //Player 2 = lower ones.
     private JFrame frame;
     private Battle battle;
     Player p1;
     Player p2;
+
+    JPanel upperStatusScreen;
+    JPanel upperCardRow;
+    JPanel middleField;
+    JPanel lowerCardRow;
+    JPanel lowerStatusScreen;
 
     JLabel player1Name;
     JLabel player1Armor;
@@ -58,11 +69,11 @@ public class BattleView implements Runnable {
 
     private void createComponents(Container container) {
         container.setLayout(new GridLayout(5, 1));
-        JPanel upperStatusScreen = new JPanel(new GridLayout(1, 5));
-        JPanel upperCardRow = new JPanel(new GridLayout(1, 12));
-        JPanel middleField = new JPanel(new GridLayout(1, 1));
-        JPanel lowerCardRow = new JPanel(new GridLayout(1, 12));
-        JPanel lowerStatusScreen = new JPanel(new GridLayout(1, 5));
+        upperStatusScreen = new JPanel(new GridLayout());
+        upperCardRow = new JPanel(new GridLayout());
+        middleField = new JPanel(new GridLayout());
+        lowerCardRow = new JPanel(new GridLayout());
+        lowerStatusScreen = new JPanel(new GridLayout());
 
         // Create resource info screens for player 1
         player1Name = new JLabel();
@@ -98,7 +109,7 @@ public class BattleView implements Runnable {
         upperStatusScreen.add(player1HP);
         upperStatusScreen.add(player1Mana);
         upperStatusScreen.add(player1ManaProduction);
-        
+
         // Add player 2 info screens to the lower status screen
         lowerStatusScreen.add(player2Name);
         lowerStatusScreen.add(player2Armor);
@@ -116,7 +127,10 @@ public class BattleView implements Runnable {
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
-        upperCardRow.add(new JButton("<html><big>DECK</big></html>"));
+        
+        JButton deckButton1 = new JButton("<html><big>DECK</big></html>");
+        deckButton1.addActionListener(new DeckListener(p1));
+        upperCardRow.add(deckButton1);
 
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
@@ -128,8 +142,11 @@ public class BattleView implements Runnable {
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
-        lowerCardRow.add(new JButton("<html><big>DECK</big></html>"));
-                
+        
+        JButton deckButton2 = new JButton("<html><big>DECK</big></html>");
+        deckButton2.addActionListener(new DeckListener(p2));
+        lowerCardRow.add(deckButton2);
+
         container.add(upperStatusScreen);
         container.add(upperCardRow);
         container.add(middleField);
@@ -151,6 +168,83 @@ public class BattleView implements Runnable {
             player2HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()));
             player2Mana.setText("Mana: " + Integer.toString(px.getMana()));
             player2ManaProduction.setText("Mana production: " + Integer.toString(px.getManaProduction()));
+        }
+    }
+
+    public void updatePlayerCards(Player player) {
+        initializePlayerCards(player);
+        ArrayList<Card> cards = player.getHand().getCards();
+        for (int i = 0; i < cards.size(); i++) {
+            if (player == p1) {
+                JButton cardButton = (JButton) upperCardRow.getComponent(i);
+                cardButton.setText(cards.get(i).toString());
+                cardButton.addActionListener(new CardListener(player, cards.get(i)));
+            } else {
+                JButton cardButton = (JButton) lowerCardRow.getComponent(i);
+                cardButton.addActionListener(new CardListener(player, cards.get(i)));
+                cardButton.addActionListener(new CardListener(player, cards.get(i)));
+            }
+        }
+    }
+
+    public void initializePlayerCards(Player player) {
+        if (player == p1) {
+            for (int i = 0; i < 10; i++) {
+                JButton cardButton = (JButton) upperCardRow.getComponent(i);
+                cardButton.setText("empty");
+                ActionListener[] actionListeners = cardButton.getActionListeners();
+                for (ActionListener actionListener : actionListeners) {
+                    cardButton.removeActionListener(actionListener);
+                }
+            }
+        } else {
+            for (int i = 0; i < 10; i++) {
+                JButton cardButton = (JButton) lowerCardRow.getComponent(i);
+                cardButton.setText("empty");
+                ActionListener[] actionListeners = cardButton.getActionListeners();
+                for (ActionListener actionListener : actionListeners) {
+                    cardButton.removeActionListener(actionListener);
+                }
+            }
+        }
+    }
+
+    public void updateAll() {
+        updatePlayerStatus(p1);
+        updatePlayerStatus(p2);
+        updatePlayerCards(p1);
+        updatePlayerCards(p2);
+    }
+
+    public class DeckListener implements ActionListener {
+
+        private Player player;
+
+        public DeckListener(Player player) {
+            this.player = player;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            player.drawCard();
+            updatePlayerCards(player);
+        }
+    }
+
+    public class CardListener implements ActionListener {
+
+        private Player player;
+        private Card card;
+
+        public CardListener(Player player, Card card) {
+            this.player = player;
+            this.card = card;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            player.useCard(card);
+            updateAll();
         }
     }
 }

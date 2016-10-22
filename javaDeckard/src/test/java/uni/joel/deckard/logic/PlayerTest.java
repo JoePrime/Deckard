@@ -41,7 +41,7 @@ public class PlayerTest {
         deck.addCards(card, 5);
         assertTrue(matti.getHand().getCards().isEmpty());
         matti.drawCard();
-        assertTrue(matti.getHand().getCards().containsKey(card));
+        assertTrue(matti.getHand().getCards().contains(card));
     }
 
     @Test
@@ -49,7 +49,7 @@ public class PlayerTest {
         Deck deck = matti.getDeck();
         deck.addCards(card, 5);
         matti.drawCard();
-        assertTrue(matti.getHand().getCards().containsKey(card));
+        assertTrue(matti.getHand().getCards().contains(card));
         matti.useCard(card);
         assertTrue(matti.getHand().getCards().isEmpty());
     }
@@ -59,19 +59,19 @@ public class PlayerTest {
         Deck deck = matti.getDeck();
         deck.addCards(card, 1);
         matti.drawCard();
-        assertTrue(matti.getHand().getCards().containsKey(card));
+        assertTrue(matti.getHand().getCards().contains(card));
         matti.useCard(card2);
-        assertTrue(matti.getHand().getCards().containsKey(card));
-        assertFalse(matti.getHand().getCards().containsKey(card2));
+        assertTrue(matti.getHand().getCards().contains(card));
+        assertFalse(matti.getHand().getCards().contains(card2));
     }
 
     @Test
     public void addingToHandWorks() {
         matti.addToHand(card);
-        assertTrue(matti.getHand().getCards().containsKey(card));
-        assertFalse(matti.getHand().getCards().containsKey(card2));
+        assertTrue(matti.getHand().getCards().contains(card));
+        assertFalse(matti.getHand().getCards().contains(card2));
         matti.addToHand(card2);
-        assertTrue(matti.getHand().getCards().containsKey(card2));
+        assertTrue(matti.getHand().getCards().contains(card2));
     }
 
     @Test

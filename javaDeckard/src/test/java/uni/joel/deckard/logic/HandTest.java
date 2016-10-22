@@ -28,9 +28,11 @@ public class HandTest {
     public void addingCardsWorksCorrectly() {
         hand.addCard(card1);
         hand.addCard(card2);
+        assertTrue(hand.getCards().size() == 2);
         hand.addCard(card2);
-        assertThat(hand.amountOfCard(card1), is(1));
-        assertThat(hand.amountOfCard(card2), is(2));
+        assertTrue(hand.getCards().size() == 3);
+        assertTrue(hand.containsCard(card1));
+        assertTrue(hand.containsCard(card2));
     }
 
     @Test
@@ -40,22 +42,23 @@ public class HandTest {
         hand.addCard(card2);
         hand.removeCard(card1);
         hand.removeCard(card2);
-        assertThat(hand.amountOfCard(card1), is(0));
-        assertThat(hand.amountOfCard(card2), is(1));
+        assertFalse(hand.containsCard(card1));
+        assertTrue(hand.containsCard(card2));
     }
 
-    @Test
-    public void removingSeveralCardsWorksCorrectly() {
-        hand.addCard(card2);
-        hand.addCard(card2);
-        hand.addCard(card2);
-        hand.removeAmountOfCard(card2, 0);
-        assertThat(hand.amountOfCard(card2), is(3));
-        hand.removeAmountOfCard(card2, -5);
-        assertThat(hand.amountOfCard(card2), is(3));
-        hand.removeAmountOfCard(card2, 1);
-        assertThat(hand.amountOfCard(card2), is(2));
-        hand.removeAmountOfCard(card2, 3);
-        assertThat(hand.amountOfCard(card2), is(0));
-    }
+    // Test for the old Hand implementation using HashMap.
+//    @Test
+//    public void removingSeveralCardsWorksCorrectly() {
+//        hand.addCard(card2);
+//        hand.addCard(card2);
+//        hand.addCard(card2);
+//        hand.removeAmountOfCard(card2, 0);
+//        assertThat(hand.amountOfCard(card2), is(3));
+//        hand.removeAmountOfCard(card2, -5);
+//        assertThat(hand.amountOfCard(card2), is(3));
+//        hand.removeAmountOfCard(card2, 1);
+//        assertThat(hand.amountOfCard(card2), is(2));
+//        hand.removeAmountOfCard(card2, 3);
+//        assertThat(hand.amountOfCard(card2), is(0));
+//    }
 }

@@ -25,6 +25,7 @@ public class Player {
     /**
      * Constructor for Player. Creates a new deck for the player called "game
      * deck" and gives the player a new hand.
+     *
      * @param name The name that the player gets.
      */
     public Player(String name) {
@@ -34,10 +35,14 @@ public class Player {
     }
 
     /**
-     * Draws a new random card from the deck.
+     * Draws a new random card from the deck and returns it.
+     *
+     * @return The card that was drawn.
      */
-    public void drawCard() {
-        hand.addCard(deck.newCard());
+    public Card drawCard() {
+        Card newCard = deck.newCard();
+        hand.addCard(newCard);
+        return newCard;
     }
 
     /**
@@ -47,7 +52,7 @@ public class Player {
      * @return True if the card was used successfully, otherwise false.
      */
     public boolean useCard(Card card) {
-        if (hand.amountOfCard(card) > 0) {
+        if (hand.containsCard(card)) {
             card.invoke(this);
             hand.removeCard(card);
             return true;

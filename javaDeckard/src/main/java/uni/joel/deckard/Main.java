@@ -33,10 +33,12 @@ public class Main {
 //        p1.useCard(newCard);
 //        System.out.println("Attack card used.");
 //        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
-        
         Player kalle = new Player("Kalle");
         Player ritva = new Player("Ritva");
+        kalle.getDeck().addCards(new AttackCard(), 10);
+        ritva.getDeck().addCards(new AttackCard(), 10);
         Battle battle = new Battle(kalle, ritva);
+        battle.StartBattle();
 
     }
 }
