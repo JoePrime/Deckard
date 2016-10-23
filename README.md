@@ -11,3 +11,4 @@ A turn-based deck building card game for two players. The idea is to have a wide
 Tarkastajille:
 Account-luokan toiminnallisuutta en ehtinyt lisäämään joten se ei toistaiseksi tee mitään.
 
+Jos katsottu puolta yötä edeltävää commitia, niin pit-linkissä näkyy vain kokonaiskuva kattavuuksista ja html-previewin linkit eivät toimi. Loput tiedostot rivi- ja mutaatiokattavuuden lähempää tarkastelua varten sain linkattua vasta pari minuuttia puolen yön jälkeen.
