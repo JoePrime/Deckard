@@ -12,6 +12,7 @@ import uni.joel.deckard.logic.cards.Card;
  */
 public class Hand {
 
+    public static final int DEFAULTSIZE = 5;
     /**
      * The maximum amount of cards a player can have in their hand at once.
      */
@@ -73,7 +74,7 @@ public class Hand {
      *
      * @return The amount of cards in the hand.
      */
-    public int getSize() {
+    public int size() {
         return cards.size();
     }
 

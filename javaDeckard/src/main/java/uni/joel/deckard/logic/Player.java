@@ -43,7 +43,7 @@ public class Player {
      * @return TRUE if the card was added to the hand, FALSE otherwise.
      */
     public boolean drawCard() {
-        if (hand.getSize() < Hand.MAXHANDSIZE) {
+        if (hand.size() < Hand.MAXHANDSIZE) {
             Card newCard = deck.newCard();
             hand.addCard(newCard);
             return true;
