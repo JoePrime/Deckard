@@ -23,25 +23,8 @@ public class Main {
      * @param args arguments
      */
     public static void main(String[] args) {
-
-//        // DEMO/TEST CODE
-//        Player p1 = new Player("Harri");
-//        Player p2 = new Player("Ritva");
-//        Battle battle = new Battle(p1, p2);
-//        Card newCard = new AttackCard("Sword", 5, "Used to hit the opponent.");
-//        p1.addToHand(newCard);
-//        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
-//        p1.useCard(newCard);
-//        System.out.println("Attack card used.");
-//        System.out.println("Ritva has " + p2.getHitpoints() + " hitpoints.");
-        Player kalle = new Player("Kalle");
-        Player ritva = new Player("Ritva");
-        kalle.getDeck().addCards(new AttackCard(), 5);
-        ritva.getDeck().addCards(new AttackCard(), 5);
-        kalle.getDeck().addCards(new BypassAttackCard(), 5);
-        ritva.getDeck().addCards(new BypassAttackCard(), 5);
-        Battle battle = new Battle(kalle, ritva);
-        battle.StartBattle();
+        Game newGame = new Game();
+        newGame.startGame();
 
     }
 }

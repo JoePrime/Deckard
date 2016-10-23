@@ -16,7 +16,7 @@ public class Hand {
      * The maximum amount of cards a player can have in their hand at once.
      */
     public static final int MAXHANDSIZE = 10;
-    
+
     /**
      * The cards in the hand as an ArrayList.
      */
@@ -30,15 +30,20 @@ public class Hand {
     }
 
     /**
-     * Adds the given card to the hand.
+     * Adds the given card to the hand. Does not add the card if the MAXHANDSIZE
+     * would be exceeded.
      *
      * @param card The given card.
+     * @return Returns true if the card was added to the hand, and false
+     * otherwise.
      */
-    public void addCard(Card card) {
-        if (cards.size()< MAXHANDSIZE) {
+    public boolean addCard(Card card) {
+        if (cards.size() < MAXHANDSIZE) {
             cards.add(card);
+            return true;
         }
-        
+        return false;
+
     }
 
     /**
@@ -55,11 +60,21 @@ public class Hand {
 
     /**
      * Tells if there is any of the given card in the hand.
+     *
      * @param card The card being asked about.
      * @return True if there is at least one of the given card, false otherwise.
      */
     public boolean containsCard(Card card) {
         return cards.contains(card);
+    }
+
+    /**
+     * Tells how many cards are in the hand.
+     *
+     * @return The amount of cards in the hand.
+     */
+    public int getSize() {
+        return cards.size();
     }
 
     public ArrayList<Card> getCards() {

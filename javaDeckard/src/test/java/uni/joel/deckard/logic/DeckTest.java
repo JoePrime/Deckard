@@ -14,7 +14,7 @@ import uni.joel.deckard.logic.cards.TestCard;
 
 /**
  * Tests the Deck class.
-*/
+ */
 public class DeckTest {
 
     private Deck deck;
@@ -27,20 +27,20 @@ public class DeckTest {
         this.card = new AttackCard("test card", 0, "For testing decks.");
         this.card2 = new TestCard("Also a test card", 5, "Also for testing purposes.");
     }
-    
+
     @Test
     public void creatingDeckWorks() {
         Deck testDeck = new Deck("test deck");
         assertEquals("test deck", testDeck.getName());
     }
-            
+
     @Test
     public void addingToDeckWorks() {
         deck.addCards(card, 6);
         deck.addCards(card, 1);
         assertEquals(7, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void addingBadAmountDoesNotWork() {
         deck.addCards(card, 0);
@@ -48,14 +48,14 @@ public class DeckTest {
         deck.addCards(card, -5);
         assertEquals(0, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void addingExistingCardRaisesAmount() {
         deck.addCards(card, 5);
         deck.addCards(card, 8);
         assertEquals(13, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void removingCardWorks() {
         deck.addCards(card, 10);
@@ -64,14 +64,14 @@ public class DeckTest {
         deck.removeCardAmount(card, 5);
         assertEquals(0, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void removingAllOfCardWorks() {
         deck.addCards(card, 1000);
         deck.removeCardAll(card);
         assertEquals(0, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void removingInexistantCardDoesNothing() {
         deck.removeCardAmount(card, 10);
@@ -79,7 +79,7 @@ public class DeckTest {
         deck.removeCardAll(card);
         assertEquals(0, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void removingErronousAmountDoesNotWork() {
         deck.removeCardAmount(card, -5);
@@ -90,14 +90,14 @@ public class DeckTest {
         deck.removeCardAmount(card, -1);
         assertEquals(10, deck.amountOfCard(card));
     }
-    
+
     @Test
     public void emptyingTheDeckWorks() {
-         deck.addCards(card, 6);
-         deck.empty();
-         assertTrue(deck.isEmpty());
+        deck.addCards(card, 6);
+        deck.empty();
+        assertTrue(deck.isEmpty());
     }
-    
+
     @Test
     public void drawingNewCardWorks() {
         deck.addCards(card, 5);

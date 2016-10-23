@@ -21,9 +21,9 @@ public class BattleTest {
         assertThat(testBattle.getP1().getOpponent(), is(testBattle.getP2()));
         assertThat(testBattle.getP2().getOpponent(), is(testBattle.getP1()));
     }
-    
+
     @Test
     public void startingHandsAreDrawnCorrectly() {
-        
+
     }
 }

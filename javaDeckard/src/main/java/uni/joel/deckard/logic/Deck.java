@@ -18,7 +18,8 @@ public class Deck {
 
     /**
      * Constructor for Deck.
-     * @param name 
+     *
+     * @param name
      */
     public Deck(String name) {
         cards = new HashMap<>();

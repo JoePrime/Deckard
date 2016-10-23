@@ -10,5 +10,5 @@ package uni.joel.deckard.logic;
  * @author Joel
  */
 public class BypassAttackCardTest {
-    
+
 }

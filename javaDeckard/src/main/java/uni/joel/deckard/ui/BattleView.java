@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Random;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,6 +26,7 @@ public class BattleView implements Runnable {
     private Battle battle;
     Player p1;
     Player p2;
+    static final int TURNWAITTIME = 1000;
 
     JPanel upperStatusScreen;
     JPanel upperCardRow;
@@ -128,11 +130,16 @@ public class BattleView implements Runnable {
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
         upperCardRow.add(new JButton());
-        
+
         // Add the deck button for player 1
         JButton deckButton1 = new JButton("<html><big>DECK</big></html>");
         deckButton1.addActionListener(new DeckListener(p1));
         upperCardRow.add(deckButton1);
+
+        //Add the middleField components, skip turn -button
+        JButton skipTurnButton = new JButton("<html><big>Skip turn</big></html>");
+        skipTurnButton.addActionListener(new SkipTurnListener());
+        middleField.add(skipTurnButton);
 
         // Add card buttons for player 2
         lowerCardRow.add(new JButton());
@@ -145,7 +152,7 @@ public class BattleView implements Runnable {
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
         lowerCardRow.add(new JButton());
-        
+
         // Add the deck button for player 2
         JButton deckButton2 = new JButton("<html><big>DECK</big></html>");
         deckButton2.addActionListener(new DeckListener(p2));
@@ -157,22 +164,26 @@ public class BattleView implements Runnable {
         container.add(middleField);
         container.add(lowerCardRow);
         container.add(lowerStatusScreen);
+
+        // Hide the cards of the player that is not starting.
+        hidePlayerCards(battle.drawStartingPlayer().getOpponent());
+
     }
 
     public void updatePlayerStatus(Player px) {
         if (px == p1) {
-            player1Name.setText("Player: " + px.getName());
-            player1Armor.setText("Armor: " + Integer.toString(px.getArmor()) + "/" + Player.MAXARMOR);
-            player1HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()) + "/" + Player.MAXHITPOINTS);
-            player1Mana.setText("Mana: " + Integer.toString(px.getMana()));
-            player1ManaProduction.setText("Mana production: " + Integer.toString(px.getManaProduction()));
+            player1Name.setText("<html>Player: <big>" + px.getName() + "</big></html>");
+            player1Armor.setText("<html>Armor: <big>" + Integer.toString(px.getArmor()) + "</big>/" + Player.MAXARMOR + "</html>");
+            player1HP.setText("<html>Hitpoints: <big>" + Integer.toString(px.getHitpoints()) + "</big>/" + Player.MAXHITPOINTS + "</html>");
+            player1Mana.setText("<html>Mana: <big>" + Integer.toString(px.getMana()) + "</big></html>");
+            player1ManaProduction.setText("<html>Mana production: <big>" + Integer.toString(px.getManaRecovery()) + "</big><html>");
         }
         if (px == p2) {
-            player2Name.setText("Player: " + px.getName());
-            player2Armor.setText("Armor: " + Integer.toString(px.getArmor()) + "/" + Player.MAXARMOR);
-            player2HP.setText("Hitpoints: " + Integer.toString(px.getHitpoints()) + "/" + Player.MAXHITPOINTS);
-            player2Mana.setText("Mana: " + Integer.toString(px.getMana()));
-            player2ManaProduction.setText("Mana production: " + Integer.toString(px.getManaProduction()));
+            player2Name.setText("<html>Player: <big>" + px.getName() + "</big><html>");
+            player2Armor.setText("<html>Armor: <big>" + Integer.toString(px.getArmor()) + "</big>/" + Player.MAXARMOR + "</html>");
+            player2HP.setText("<html>Hitpoints: <big>" + Integer.toString(px.getHitpoints()) + "</big>/" + Player.MAXHITPOINTS + "</html>");
+            player2Mana.setText("<html>Mana: <big>" + Integer.toString(px.getMana()) + "</big></html>");
+            player2ManaProduction.setText("<html>Mana production: <big>" + Integer.toString(px.getManaRecovery()) + "</big></html>");
         }
     }
 
@@ -221,6 +232,32 @@ public class BattleView implements Runnable {
         updatePlayerCards(p2);
     }
 
+    /**
+     * Hides the cards of the given player from view and also makes the cards of
+     * the opponent visible.
+     *
+     * @param player The player whose cards will be hidden.
+     */
+    public void hidePlayerCards(Player player) {
+        if (player == p1) {
+            upperCardRow.setVisible(false);
+            try {
+                java.lang.Thread.sleep(TURNWAITTIME);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            lowerCardRow.setVisible(true);
+        } else {
+            upperCardRow.setVisible(true);
+            try {
+                java.lang.Thread.sleep(TURNWAITTIME);
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+            lowerCardRow.setVisible(false);
+        }
+    }
+
     public class DeckListener implements ActionListener {
 
         private Player player;
@@ -231,8 +268,9 @@ public class BattleView implements Runnable {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
-            player.drawCard();
-            updatePlayerCards(player);
+            if (player.drawCard()) {
+                battle.endTurn();
+            }
         }
     }
 
@@ -248,8 +286,22 @@ public class BattleView implements Runnable {
 
         @Override
         public void actionPerformed(ActionEvent ae) {
-            player.useCard(card);
-            updateAll();
+            if (player.useCard(card)) {
+                battle.endTurn();
+            }
         }
     }
+
+    public class SkipTurnListener implements ActionListener {
+
+        public SkipTurnListener() {
+
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent ae) {
+            battle.endTurn();
+        }
+    }
+
 }

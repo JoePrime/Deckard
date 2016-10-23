@@ -14,13 +14,13 @@ public class Game {
      * Constructor for Game.
      */
     public Game() {
-        
+
     }
 
     /**
      * Creates a new login window and invokes it.
      */
-    public void newGameWindow() {
+    public void startGame() {
         LoginView loginscreen = new LoginView(this);
         SwingUtilities.invokeLater(loginscreen);
     }

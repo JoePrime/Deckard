@@ -16,7 +16,8 @@ public class Account {
 
     /**
      * Constructor method for Account.
-     * @param name 
+     *
+     * @param name
      */
     public Account(String name) {
         this.name = name;

@@ -102,6 +102,7 @@ public class LoginView implements Runnable {
             System.out.println(player2);
             frame.dispose();
             Battle newBattle = new Battle(player1, player2);
+            newBattle.StartBattle();
         }
     }
 

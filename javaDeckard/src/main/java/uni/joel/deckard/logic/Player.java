@@ -5,7 +5,7 @@ import java.lang.Math;
 
 /**
  * Player has a name, their deck, their hand (if they are in battle), hitpoints,
- * armor, mana and manaproduction which are all int values.
+ * armor, mana and manaRecovery which are all int values.
  *
  * @author Joel
  */
@@ -21,7 +21,7 @@ public class Player {
     int hitpoints = DEFAULTHITPOINTS;
     int armor = 25;
     int mana = 10;
-    int manaProduction = 3;
+    int manaRecovery = 3;
     Player opponent;
 
     /**
@@ -37,14 +37,18 @@ public class Player {
     }
 
     /**
-     * Draws a new random card from the deck and returns it.
+     * Draws a new random card from the deck and adds it to the player's hand.
+     * Does nothing if player's hand is already full.
      *
-     * @return The card that was drawn.
+     * @return TRUE if the card was added to the hand, FALSE otherwise.
      */
-    public Card drawCard() {
-        Card newCard = deck.newCard();
-        hand.addCard(newCard);
-        return newCard;
+    public boolean drawCard() {
+        if (hand.getSize() < Hand.MAXHANDSIZE) {
+            Card newCard = deck.newCard();
+            hand.addCard(newCard);
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -55,9 +59,12 @@ public class Player {
      */
     public boolean useCard(Card card) {
         if (hand.containsCard(card)) {
-            card.invoke(this);
-            hand.removeCard(card);
-            return true;
+            if (mana >= card.getManaCost()) {
+                card.invoke(this);
+                hand.removeCard(card);
+                changeManaBy(-card.getManaCost());
+                return true;
+            }
         }
         return false;
     }
@@ -141,12 +148,13 @@ public class Player {
             hitpoints = Math.min(MAXHITPOINTS, hitpoints + amount);
         }
     }
-    
+
     /**
      * Changes armor by the given amount. Amount can be positive or negative.
      * Armor will be lowered if the amount is negative and vice versa. If armor
      * is tried to lower or raise too much, instead changes it to 0 or Player.
      * maxArmor, respectively.
+     *
      * @param amount The int amount the player's armor should be changed by.
      */
     public void changeArmorBy(int amount) {
@@ -155,6 +163,16 @@ public class Player {
         } else {
             armor = Math.min(MAXARMOR, armor + amount);
         }
+    }
+
+    /**
+     * Changes the player's mana by the given amount. Checks that the mana does
+     * not go below zero.
+     *
+     * @param amount The amount the mana should be changed by.
+     */
+    public void changeManaBy(int amount) {
+        this.mana = Math.max(this.mana + amount, 0);
     }
 
     public int getArmor() {
@@ -173,12 +191,12 @@ public class Player {
         this.mana = mana;
     }
 
-    public int getManaProduction() {
-        return manaProduction;
+    public int getManaRecovery() {
+        return manaRecovery;
     }
 
-    public void setManaProduction(int manaProduction) {
-        this.manaProduction = manaProduction;
+    public void setManaRecovery(int manaRecovery) {
+        this.manaRecovery = manaRecovery;
     }
 
     public Player getOpponent() {

@@ -13,6 +13,7 @@ public class GainHealthCard extends Card {
 
     /**
      * Constructor for GainHealthCard.
+     *
      * @param name name
      * @param mana mana
      * @param desc description

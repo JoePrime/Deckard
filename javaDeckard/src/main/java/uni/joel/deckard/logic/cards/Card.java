@@ -5,26 +5,26 @@ import uni.joel.deckard.logic.Player;
 
 /**
  * Abstract Card class used a base for all the other card classes. All cards
- * have a name, a cost (mana) and a description.
+ * have a name, a cost (manaCost) and a description.
  *
  * @author Joel
  */
 public abstract class Card {
 
     String name;
-    int mana;
+    int manaCost;
     String description;
 
     /**
      * The constructor for the card.
      */
     public Card() {
-        
+
     }
-    
-    public Card(String name, int mana, String description) {
+
+    public Card(String name, int manaCost, String description) {
         this.name = name;
-        this.mana = mana;
+        this.manaCost = manaCost;
         this.description = description;
     }
 
@@ -43,22 +43,23 @@ public abstract class Card {
         Card card = (Card) obj;
         if (this.getClass() == card.getClass()
                 && card.getName().equals(this.name)
-                && card.getMana() == this.mana
+                && card.getManaCost() == this.manaCost
                 && card.getDescription().equals(this.description)) {
             return true;
         }
         return false;
     }
-    
+
     /**
      * This method is used to write the html description for the cards. This
-     * text contains all the info on the card and is shown in the card's slot
-     * in the BattleView part of the graphical user interface.
+     * text contains all the info on the card and is shown in the card's slot in
+     * the BattleView part of the graphical user interface.
+     *
      * @return The textual info of the card.
      */
     @Override
     public String toString() {
-        return "<html>Cost: " + this.mana + "<br/>" + this.name.toUpperCase() + "<br/>" + this.description;
+        return "<html>Cost: " + this.manaCost + "<br/>" + this.name.toUpperCase() + "<br/>" + this.description;
     }
 
     public String getName() {
@@ -69,12 +70,12 @@ public abstract class Card {
         this.name = name;
     }
 
-    public int getMana() {
-        return mana;
+    public int getManaCost() {
+        return manaCost;
     }
 
-    public void setMana(int mana) {
-        this.mana = mana;
+    public void setManaCost(int manaCost) {
+        this.manaCost = manaCost;
     }
 
     public String getDescription() {

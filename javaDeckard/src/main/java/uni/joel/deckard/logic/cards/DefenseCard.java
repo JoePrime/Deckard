@@ -9,6 +9,7 @@ public class DefenseCard extends Card {
 
     /**
      * Constructor for DefenseCard.
+     *
      * @param name name
      * @param mana mana
      * @param desc description
