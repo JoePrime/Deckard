@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.11.2">
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Account.java">
+<error line="22" column="27" severity="error" message="Expected @param tag for &apos;name&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Battle.java">
+<error line="40" column="17" severity="error" message="Name &apos;StartBattle&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="68" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="87" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\AttackCard.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\BypassAttackCard.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\Card.java">
+<error line="25" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\DefenseCard.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\GainHealthCard.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\cards\TestCard.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Deck.java">
+<error line="24" column="24" severity="error" message="Expected @param tag for &apos;name&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Game.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Hand.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Main.java">
+<error line="17" column="38" severity="error" message="Expected @param tag for &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\logic\Player.java">
+<error line="1" severity="error" message="File length is 210 lines (max allowed is 200)." source="com.puppycrawl.tools.checkstyle.checks.sizes.FileLengthCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\Main.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\ui\BattleView.java">
+<error line="1" severity="error" message="File length is 307 lines (max allowed is 200)." source="com.puppycrawl.tools.checkstyle.checks.sizes.FileLengthCheck"/>
+<error line="173" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="190" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="206" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="228" column="5" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="265" column="9" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="282" column="9" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+<error line="297" column="9" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\ui\LoginView.java">
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\ui\Main.java">
+<error line="19" column="38" severity="error" message="Expected @param tag for &apos;args&apos;." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
+</file>
+<file name="C:\Users\Joel\Documents\GitHub\Deckard\javaDeckard\src\main\java\uni\joel\deckard\ui\TestClass.java">
+</file>
+</checkstyle>

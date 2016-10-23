@@ -51,8 +51,7 @@ public class Deck {
      * @param card the card to be added
      * @param amount amount of the card to be added
      *
-     * @see uni.joel.deckard.logic.Battle#useCard(uni.joel.deckard.logic.Player,
-     * uni.joel.deckard.logic.cards.Card)
+     * 
      */
     public void addCards(Card card, int amount) {
         if (amount > 0) {

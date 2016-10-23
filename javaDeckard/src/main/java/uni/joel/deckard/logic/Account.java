@@ -17,7 +17,7 @@ public class Account {
     /**
      * Constructor method for Account.
      *
-     * @param name
+     * @param name name of the player
      */
     public Account(String name) {
         this.name = name;
