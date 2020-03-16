@@ -1,5 +1,5 @@
 # Deckard
-A turn-based deck building card game for two players. The idea is to have a wide variety of cards and fun gameplay.
+A turn-based deck-building card game for two players. The idea is to have a wide variety of cards and fun gameplay.
 
 ###Dokumentaatio
 [Aiheen kuvaus](https://github.com/JoePrime/Deckard/blob/master/dokumentaatio/aiheenKuvausJaRakenne.md)  
